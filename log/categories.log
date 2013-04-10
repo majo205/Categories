@@ -1,0 +1,13 @@
+16:16:43,233 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+16:16:43,236 TRACE StringType:153 - binding 'category description' to parameter: 2
+16:16:43,236 TRACE StringType:153 - binding 'categoryName' to parameter: 3
+16:16:43,236 TRACE IntegerType:153 - binding '5' to parameter: 4
+16:16:43,237 TRACE IntegerType:153 - binding '7' to parameter: 5
+16:16:43,237 TRACE IntegerType:153 - binding '10' to parameter: 6
+16:16:43,237 TRACE TimestampType:153 - binding '2013-04-10 16:16:43' to parameter: 7
+16:16:43,245 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+16:16:43,257 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+16:16:43,257 TRACE StringType:153 - binding 'group description' to parameter: 2
+16:16:43,258 TRACE StringType:153 - binding 'groupName' to parameter: 3
+16:16:43,258 TRACE IntegerType:153 - binding '5' to parameter: 4
+16:16:43,258 TRACE TimestampType:153 - binding '2013-04-10 16:16:43' to parameter: 5
