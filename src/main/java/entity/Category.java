@@ -7,48 +7,76 @@ import javax.persistence.*;
 
 import org.hibernate.annotations.Type;
 import org.hibernate.type.TrueFalseType;
+import org.springframework.beans.factory.annotation.Required;
 
-
-@Entity (name="COMMON_CATEGORIES")
+@Entity(name = "COMMON_CATEGORIES")
 public class Category {
-	
+
 	@Id
-	@Column (name= "COMMON_CATEGORY_ID", nullable= false, unique= true, length=38)
-	@GeneratedValue (strategy=GenerationType.IDENTITY)
-	private int commonCategoryId;
-	
-	@Column (name="NAME", nullable=true, length=150)
+	@Column(name = "COMMON_CATEGORY_ID", nullable = false, unique = true, length = 38)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer commonCategoryId;
+
+	@Column(name = "NAME", nullable = true, length = 150)
 	private String name;
-	
-	@Column (name="DESCRIPTION", nullable=true, length= 500)
+
+	@Column(name = "DESCRIPTION", nullable = true, length = 500)
 	private String description;
+
+	@Column(name = "PARENT_CATEGORY", nullable = true, length = 38)
+	private Integer parentCategory;
+
+	@Column(name = "POSITION", nullable = false, length = 38)
+	private Integer position;
 	
-	@Column (name="PARENT_CATEGORY", nullable=true, length=38)
-	private int parentCategory;
-	
-	@Column (name="POSITION", nullable=false, length=38)	
-	private int position;
-	
-	@Column (name="UPDATED_DATE", nullable=true)
+	@Column(name = "UPDATED_DATE", nullable = true)
 	private Date updateDate;
-	
-	@Column (name="DELETED", nullable=true )
-	@Type (type="true_false")
-	private boolean deleted; //yesorno
-	
-	@Column (name="ORGN_ID", nullable=true, length=10)
-	private int organisationId;
-	
-	@Column (name="UUID", nullable=true, length=36)
+
+	@Column(name = "DELETED", nullable = false)
+	@Type(type = "true_false")	
+	private boolean deleted; // yesorno
+
+	@Column(name = "ORGN_ID", nullable = true, length = 10)
+	private Integer organisationId;
+
+	@Column(name = "UUID", nullable = true, length = 36)
 	private String uuid;
+
+	public Category(){
+		
+	}
 	
-//	@ManyToOne //(targetEntity="")
-//	@JoinTable(name="COMMN_CATG_CATG_GRPS",
-//	    joinColumns = @JoinColumn(name = "COMMON_CATEGORY_ID", 
-//	                              referencedColumnName = "COMMON_CATEGORY_ID"), 
-//	    inverseJoinColumns = @JoinColumn(name = "COMMN_CATG_GROUP_ID", 
-//	                              referencedColumnName = "COMMN_CATG_GROUP_ID"))
-//		private List<CategoryGroup> group;
+	
+	public Category(String name, String description, int position) {
+		super();
+		this.name = name;
+		this.description = description;
+		this.position = position;
+	}
+
+
+	public Category(String name, String description, Integer parentCategory,
+			int position, Date updateDate, boolean deleted, int organisationId,
+			String uuid) {
+		super();
+		this.commonCategoryId = commonCategoryId;
+		this.name = name;
+		this.description = description;
+		this.parentCategory = parentCategory;
+		this.position = position;
+		this.updateDate = updateDate;
+		this.deleted = deleted;
+		this.organisationId = organisationId;
+		this.uuid = uuid;
+	}
+
+	// @ManyToOne //(targetEntity="")
+	// @JoinTable(name="COMMN_CATG_CATG_GRPS",
+	// joinColumns = @JoinColumn(name = "COMMON_CATEGORY_ID",
+	// referencedColumnName = "COMMON_CATEGORY_ID"),
+	// inverseJoinColumns = @JoinColumn(name = "COMMN_CATG_GROUP_ID",
+	// referencedColumnName = "COMMN_CATG_GROUP_ID"))
+	// private List<CategoryGroup> group;
 
 	public int getCommonCategoryId() {
 		return commonCategoryId;
@@ -122,14 +150,12 @@ public class Category {
 		this.uuid = uuid;
 	}
 
-//	public List<CategoryGroup> getGroup() {
-//		return group;
-//	}
-//
-//	public void setGroup(List<CategoryGroup> group) {
-//		this.group = group;
-//	}
-	
-	
-		
+	// public List<CategoryGroup> getGroup() {
+	// return group;
+	// }
+	//
+	// public void setGroup(List<CategoryGroup> group) {
+	// this.group = group;
+	// }
+
 }

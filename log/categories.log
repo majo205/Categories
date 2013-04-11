@@ -11,3 +11,293 @@
 16:16:43,258 TRACE StringType:153 - binding 'groupName' to parameter: 3
 16:16:43,258 TRACE IntegerType:153 - binding '5' to parameter: 4
 16:16:43,258 TRACE TimestampType:153 - binding '2013-04-10 16:16:43' to parameter: 5
+14:13:35,229 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+14:13:35,246 TRACE StringType:153 - binding 'category description' to parameter: 2
+14:13:35,246 TRACE StringType:153 - binding 'categoryName' to parameter: 3
+14:13:35,247 TRACE IntegerType:153 - binding '5' to parameter: 4
+14:13:35,247 TRACE IntegerType:153 - binding '7' to parameter: 5
+14:13:35,247 TRACE IntegerType:153 - binding '10' to parameter: 6
+14:13:35,247 TRACE TimestampType:153 - binding '2013-04-11 14:13:35' to parameter: 7
+14:13:35,255 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+14:13:35,283 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+14:13:35,283 TRACE StringType:153 - binding 'group description' to parameter: 2
+14:13:35,283 TRACE StringType:153 - binding 'groupName' to parameter: 3
+14:13:35,284 TRACE IntegerType:153 - binding '5' to parameter: 4
+14:13:35,284 TRACE TimestampType:153 - binding '2013-04-11 14:13:35' to parameter: 5
+14:13:35,296 TRACE IntegerType:153 - binding '1' to parameter: 1
+14:13:35,297 TRACE IntegerType:153 - binding '1' to parameter: 2
+14:15:21,461 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+14:15:21,465 TRACE StringType:153 - binding 'secondcategory description' to parameter: 2
+14:15:21,465 TRACE StringType:153 - binding 'secondcategoryName' to parameter: 3
+14:15:21,465 TRACE IntegerType:153 - binding '5' to parameter: 4
+14:15:21,465 TRACE IntegerType:153 - binding '7' to parameter: 5
+14:15:21,465 TRACE IntegerType:153 - binding '10' to parameter: 6
+14:15:21,466 TRACE TimestampType:153 - binding '2013-04-11 14:15:21' to parameter: 7
+14:15:21,473 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+14:15:21,494 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+14:15:21,494 TRACE StringType:153 - binding 'group description' to parameter: 2
+14:15:21,494 TRACE StringType:153 - binding 'groupName' to parameter: 3
+14:15:21,494 TRACE IntegerType:153 - binding '5' to parameter: 4
+14:15:21,495 TRACE TimestampType:153 - binding '2013-04-11 14:15:21' to parameter: 5
+14:15:21,507 TRACE IntegerType:153 - binding '1' to parameter: 1
+14:15:21,508 TRACE IntegerType:153 - binding '1' to parameter: 2
+14:15:21,509 TRACE IntegerType:153 - binding '1' to parameter: 1
+14:15:21,512 TRACE IntegerType:153 - binding '1' to parameter: 2
+14:24:59,583 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+14:24:59,587 TRACE StringType:153 - binding 'category description' to parameter: 2
+14:24:59,587 TRACE StringType:153 - binding 'categoryName' to parameter: 3
+14:24:59,587 TRACE IntegerType:153 - binding '5' to parameter: 4
+14:24:59,587 TRACE IntegerType:153 - binding '7' to parameter: 5
+14:24:59,588 TRACE IntegerType:153 - binding '10' to parameter: 6
+14:24:59,588 TRACE TimestampType:153 - binding '2013-04-11 14:24:59' to parameter: 7
+14:24:59,597 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+14:24:59,619 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+14:24:59,619 TRACE StringType:153 - binding 'group description' to parameter: 2
+14:24:59,619 TRACE StringType:153 - binding 'groupName' to parameter: 3
+14:24:59,620 TRACE IntegerType:153 - binding '5' to parameter: 4
+14:24:59,620 TRACE TimestampType:153 - binding '2013-04-11 14:24:59' to parameter: 5
+14:24:59,637 TRACE IntegerType:153 - binding '1' to parameter: 1
+14:24:59,638 TRACE IntegerType:153 - binding '1' to parameter: 2
+14:24:59,640 TRACE IntegerType:153 - binding '1' to parameter: 1
+14:24:59,644 ERROR AbstractFlushingEventListener:324 - Could not synchronize database state with session
+org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: entity.Category
+	at org.hibernate.engine.ForeignKeys.getEntityIdentifierIfNotUnsaved(ForeignKeys.java:244)
+	at org.hibernate.type.EntityType.getIdentifier(EntityType.java:449)
+	at org.hibernate.type.ManyToOneType.nullSafeSet(ManyToOneType.java:133)
+	at org.hibernate.persister.collection.AbstractCollectionPersister.writeElement(AbstractCollectionPersister.java:816)
+	at org.hibernate.persister.collection.AbstractCollectionPersister.recreate(AbstractCollectionPersister.java:1204)
+	at org.hibernate.action.CollectionRecreateAction.execute(CollectionRecreateAction.java:58)
+	at org.hibernate.engine.ActionQueue.execute(ActionQueue.java:267)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:259)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:182)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at service.Client.main(Client.java:77)
+14:27:11,713 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+14:27:11,717 TRACE StringType:153 - binding 'category description' to parameter: 2
+14:27:11,717 TRACE StringType:153 - binding 'categoryName' to parameter: 3
+14:27:11,718 TRACE IntegerType:153 - binding '5' to parameter: 4
+14:27:11,718 TRACE IntegerType:153 - binding '7' to parameter: 5
+14:27:11,718 TRACE IntegerType:153 - binding '10' to parameter: 6
+14:27:11,720 TRACE TimestampType:153 - binding '2013-04-11 14:27:11' to parameter: 7
+14:27:11,732 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+14:27:11,740 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+14:27:11,740 TRACE StringType:153 - binding 'popis' to parameter: 2
+14:27:11,740 TRACE StringType:153 - binding 'meno' to parameter: 3
+14:27:11,740 TRACE IntegerType:153 - binding '0' to parameter: 4
+14:27:11,740 TRACE IntegerType:146 - binding null to parameter: 5
+14:27:11,741 TRACE IntegerType:153 - binding '25' to parameter: 6
+14:27:11,741 TRACE TimestampType:146 - binding null to parameter: 7
+14:27:11,741 TRACE StringType:146 - binding null to parameter: 8
+14:27:11,764 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+14:27:11,764 TRACE StringType:153 - binding 'group description' to parameter: 2
+14:27:11,764 TRACE StringType:153 - binding 'groupName' to parameter: 3
+14:27:11,764 TRACE IntegerType:153 - binding '5' to parameter: 4
+14:27:11,765 TRACE TimestampType:153 - binding '2013-04-11 14:27:11' to parameter: 5
+14:27:11,779 TRACE IntegerType:153 - binding '1' to parameter: 1
+14:27:11,780 TRACE IntegerType:153 - binding '1' to parameter: 2
+14:27:11,781 TRACE IntegerType:153 - binding '1' to parameter: 1
+14:27:11,781 TRACE IntegerType:153 - binding '2' to parameter: 2
+15:02:16,075 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+15:02:16,079 TRACE StringType:153 - binding 'category description' to parameter: 2
+15:02:16,079 TRACE StringType:153 - binding 'categoryName' to parameter: 3
+15:02:16,079 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:02:16,079 TRACE IntegerType:153 - binding '7' to parameter: 5
+15:02:16,079 TRACE IntegerType:153 - binding '10' to parameter: 6
+15:02:16,080 TRACE TimestampType:153 - binding '2013-04-11 15:02:16' to parameter: 7
+15:02:16,088 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+15:02:16,095 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:02:16,095 TRACE StringType:153 - binding 'popis' to parameter: 2
+15:02:16,095 TRACE StringType:153 - binding 'meno' to parameter: 3
+15:02:16,095 TRACE IntegerType:146 - binding null to parameter: 4
+15:02:16,096 TRACE IntegerType:146 - binding null to parameter: 5
+15:02:16,096 TRACE IntegerType:153 - binding '25' to parameter: 6
+15:02:16,096 TRACE TimestampType:146 - binding null to parameter: 7
+15:02:16,096 TRACE StringType:146 - binding null to parameter: 8
+15:02:16,112 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:02:16,112 TRACE StringType:153 - binding 'group description' to parameter: 2
+15:02:16,113 TRACE StringType:153 - binding 'groupName' to parameter: 3
+15:02:16,113 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:02:16,113 TRACE TimestampType:153 - binding '2013-04-11 15:02:16' to parameter: 5
+15:02:16,124 TRACE IntegerType:153 - binding '2' to parameter: 1
+15:02:16,125 TRACE IntegerType:153 - binding '3' to parameter: 2
+15:02:16,125 TRACE IntegerType:153 - binding '2' to parameter: 1
+15:02:16,126 TRACE IntegerType:153 - binding '4' to parameter: 2
+15:02:41,185 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+15:02:41,187 TRACE StringType:153 - binding 'category description' to parameter: 2
+15:02:41,188 TRACE StringType:153 - binding 'categoryName' to parameter: 3
+15:02:41,188 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:02:41,188 TRACE IntegerType:153 - binding '7' to parameter: 5
+15:02:41,188 TRACE IntegerType:153 - binding '10' to parameter: 6
+15:02:41,188 TRACE TimestampType:153 - binding '2013-04-11 15:02:41' to parameter: 7
+15:02:41,197 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+15:02:41,204 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:02:41,204 TRACE StringType:153 - binding 'popis' to parameter: 2
+15:02:41,204 TRACE StringType:153 - binding 'meno' to parameter: 3
+15:02:41,204 TRACE IntegerType:146 - binding null to parameter: 4
+15:02:41,204 TRACE IntegerType:146 - binding null to parameter: 5
+15:02:41,204 TRACE IntegerType:153 - binding '25' to parameter: 6
+15:02:41,205 TRACE TimestampType:146 - binding null to parameter: 7
+15:02:41,205 TRACE StringType:146 - binding null to parameter: 8
+15:02:41,223 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:02:41,223 TRACE StringType:153 - binding 'group description' to parameter: 2
+15:02:41,224 TRACE StringType:153 - binding 'groupName' to parameter: 3
+15:02:41,224 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:02:41,224 TRACE TimestampType:153 - binding '2013-04-11 15:02:41' to parameter: 5
+15:02:41,235 TRACE IntegerType:153 - binding '3' to parameter: 1
+15:02:41,236 TRACE IntegerType:153 - binding '5' to parameter: 2
+15:02:41,237 TRACE IntegerType:153 - binding '3' to parameter: 1
+15:02:41,237 TRACE IntegerType:153 - binding '6' to parameter: 2
+15:08:55,815 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+15:08:55,819 TRACE StringType:153 - binding 'category description' to parameter: 2
+15:08:55,820 TRACE StringType:153 - binding 'categoryName' to parameter: 3
+15:08:55,820 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:08:55,820 TRACE IntegerType:153 - binding '7' to parameter: 5
+15:08:55,820 TRACE IntegerType:153 - binding '10' to parameter: 6
+15:08:55,820 TRACE TimestampType:153 - binding '2013-04-11 15:08:55' to parameter: 7
+15:08:55,829 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+15:08:55,836 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:08:55,836 TRACE StringType:153 - binding 'popis' to parameter: 2
+15:08:55,837 TRACE StringType:153 - binding 'meno' to parameter: 3
+15:08:55,837 TRACE IntegerType:146 - binding null to parameter: 4
+15:08:55,837 TRACE IntegerType:146 - binding null to parameter: 5
+15:08:55,837 TRACE IntegerType:153 - binding '25' to parameter: 6
+15:08:55,837 TRACE TimestampType:146 - binding null to parameter: 7
+15:08:55,837 TRACE StringType:146 - binding null to parameter: 8
+15:08:55,856 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:08:55,856 TRACE StringType:153 - binding 'group description' to parameter: 2
+15:08:55,856 TRACE StringType:153 - binding 'groupName' to parameter: 3
+15:08:55,857 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:08:55,857 TRACE TimestampType:153 - binding '2013-04-11 15:08:55' to parameter: 5
+15:08:55,868 TRACE IntegerType:153 - binding '4' to parameter: 1
+15:08:55,869 TRACE IntegerType:153 - binding '7' to parameter: 2
+15:08:55,870 TRACE IntegerType:153 - binding '4' to parameter: 1
+15:08:55,870 TRACE IntegerType:153 - binding '8' to parameter: 2
+15:11:18,702 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+15:11:18,705 TRACE StringType:153 - binding 'category description' to parameter: 2
+15:11:18,706 TRACE StringType:153 - binding 'categoryName' to parameter: 3
+15:11:18,706 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:11:18,706 TRACE IntegerType:153 - binding '7' to parameter: 5
+15:11:18,706 TRACE IntegerType:153 - binding '10' to parameter: 6
+15:11:18,706 TRACE TimestampType:153 - binding '2013-04-11 15:11:18' to parameter: 7
+15:11:18,714 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+15:11:18,721 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:11:18,722 TRACE StringType:153 - binding 'popis' to parameter: 2
+15:11:18,722 TRACE StringType:153 - binding 'meno' to parameter: 3
+15:11:18,722 TRACE IntegerType:146 - binding null to parameter: 4
+15:11:18,722 TRACE IntegerType:146 - binding null to parameter: 5
+15:11:18,722 TRACE IntegerType:153 - binding '25' to parameter: 6
+15:11:18,722 TRACE TimestampType:146 - binding null to parameter: 7
+15:11:18,723 TRACE StringType:146 - binding null to parameter: 8
+15:11:18,765 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:11:18,765 TRACE StringType:153 - binding 'group description' to parameter: 2
+15:11:18,765 TRACE StringType:153 - binding 'groupName' to parameter: 3
+15:11:18,765 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:11:18,765 TRACE TimestampType:153 - binding '2013-04-11 15:11:18' to parameter: 5
+15:11:18,776 TRACE IntegerType:153 - binding '1' to parameter: 1
+15:11:18,777 TRACE IntegerType:153 - binding '1' to parameter: 2
+15:11:18,778 TRACE IntegerType:153 - binding '1' to parameter: 1
+15:11:18,778 TRACE IntegerType:153 - binding '2' to parameter: 2
+15:12:09,179 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+15:12:09,182 TRACE StringType:153 - binding 'category description' to parameter: 2
+15:12:09,182 TRACE StringType:153 - binding 'categoryName' to parameter: 3
+15:12:09,182 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:12:09,183 TRACE IntegerType:153 - binding '7' to parameter: 5
+15:12:09,183 TRACE IntegerType:153 - binding '10' to parameter: 6
+15:12:09,183 TRACE TimestampType:153 - binding '2013-04-11 15:12:09' to parameter: 7
+15:12:09,192 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+15:12:09,199 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:12:09,199 TRACE StringType:153 - binding 'popis' to parameter: 2
+15:12:09,199 TRACE StringType:153 - binding 'meno' to parameter: 3
+15:12:09,199 TRACE IntegerType:146 - binding null to parameter: 4
+15:12:09,199 TRACE IntegerType:146 - binding null to parameter: 5
+15:12:09,199 TRACE IntegerType:153 - binding '25' to parameter: 6
+15:12:09,199 TRACE TimestampType:146 - binding null to parameter: 7
+15:12:09,199 TRACE StringType:146 - binding null to parameter: 8
+15:12:09,229 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:12:09,230 TRACE StringType:153 - binding 'group description' to parameter: 2
+15:12:09,230 TRACE StringType:153 - binding 'groupName' to parameter: 3
+15:12:09,230 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:12:09,230 TRACE TimestampType:153 - binding '2013-04-11 15:12:09' to parameter: 5
+15:12:09,255 TRACE IntegerType:153 - binding '1' to parameter: 1
+15:12:09,256 TRACE IntegerType:153 - binding '1' to parameter: 2
+15:12:09,257 TRACE IntegerType:153 - binding '1' to parameter: 1
+15:12:09,257 TRACE IntegerType:153 - binding '2' to parameter: 2
+15:12:30,756 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+15:12:30,759 TRACE StringType:153 - binding 'category description' to parameter: 2
+15:12:30,759 TRACE StringType:153 - binding 'categoryName' to parameter: 3
+15:12:30,759 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:12:30,759 TRACE IntegerType:153 - binding '7' to parameter: 5
+15:12:30,759 TRACE IntegerType:153 - binding '10' to parameter: 6
+15:12:30,760 TRACE TimestampType:153 - binding '2013-04-11 15:12:30' to parameter: 7
+15:12:30,768 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+15:12:30,775 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:12:30,775 TRACE StringType:153 - binding 'popis' to parameter: 2
+15:12:30,775 TRACE StringType:153 - binding 'meno' to parameter: 3
+15:12:30,776 TRACE IntegerType:146 - binding null to parameter: 4
+15:12:30,776 TRACE IntegerType:146 - binding null to parameter: 5
+15:12:30,776 TRACE IntegerType:153 - binding '25' to parameter: 6
+15:12:30,776 TRACE TimestampType:146 - binding null to parameter: 7
+15:12:30,776 TRACE StringType:146 - binding null to parameter: 8
+15:12:30,794 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:12:30,794 TRACE StringType:153 - binding 'group description' to parameter: 2
+15:12:30,794 TRACE StringType:153 - binding 'groupName' to parameter: 3
+15:12:30,795 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:12:30,795 TRACE TimestampType:153 - binding '2013-04-11 15:12:30' to parameter: 5
+15:12:30,807 TRACE IntegerType:153 - binding '1' to parameter: 1
+15:12:30,808 TRACE IntegerType:153 - binding '1' to parameter: 2
+15:12:30,809 TRACE IntegerType:153 - binding '1' to parameter: 1
+15:12:30,809 TRACE IntegerType:153 - binding '2' to parameter: 2
+15:14:18,502 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+15:14:18,505 TRACE StringType:153 - binding 'category description' to parameter: 2
+15:14:18,505 TRACE StringType:153 - binding 'categoryName' to parameter: 3
+15:14:18,505 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:14:18,506 TRACE IntegerType:153 - binding '7' to parameter: 5
+15:14:18,506 TRACE IntegerType:153 - binding '10' to parameter: 6
+15:14:18,506 TRACE TimestampType:153 - binding '2013-04-11 15:14:18' to parameter: 7
+15:14:18,514 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+15:14:18,520 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:14:18,521 TRACE StringType:153 - binding 'popis' to parameter: 2
+15:14:18,521 TRACE StringType:153 - binding 'meno' to parameter: 3
+15:14:18,521 TRACE IntegerType:146 - binding null to parameter: 4
+15:14:18,521 TRACE IntegerType:146 - binding null to parameter: 5
+15:14:18,521 TRACE IntegerType:153 - binding '25' to parameter: 6
+15:14:18,521 TRACE TimestampType:146 - binding null to parameter: 7
+15:14:18,522 TRACE StringType:146 - binding null to parameter: 8
+15:14:18,539 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:14:18,540 TRACE StringType:153 - binding 'group description' to parameter: 2
+15:14:18,540 TRACE StringType:153 - binding 'groupName' to parameter: 3
+15:14:18,540 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:14:18,540 TRACE TimestampType:153 - binding '2013-04-11 15:14:18' to parameter: 5
+15:14:18,551 TRACE IntegerType:153 - binding '2' to parameter: 1
+15:14:18,552 TRACE IntegerType:153 - binding '3' to parameter: 2
+15:14:18,553 TRACE IntegerType:153 - binding '2' to parameter: 1
+15:14:18,553 TRACE IntegerType:153 - binding '4' to parameter: 2
+15:18:30,098 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+15:18:30,101 TRACE StringType:153 - binding 'category description' to parameter: 2
+15:18:30,102 TRACE StringType:153 - binding 'categoryName' to parameter: 3
+15:18:30,102 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:18:30,102 TRACE IntegerType:153 - binding '7' to parameter: 5
+15:18:30,102 TRACE IntegerType:153 - binding '10' to parameter: 6
+15:18:30,103 TRACE TimestampType:153 - binding '2013-04-11 15:18:30' to parameter: 7
+15:18:30,110 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+15:18:30,116 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:18:30,116 TRACE StringType:153 - binding 'popis' to parameter: 2
+15:18:30,117 TRACE StringType:153 - binding 'meno' to parameter: 3
+15:18:30,117 TRACE IntegerType:146 - binding null to parameter: 4
+15:18:30,117 TRACE IntegerType:146 - binding null to parameter: 5
+15:18:30,117 TRACE IntegerType:153 - binding '25' to parameter: 6
+15:18:30,117 TRACE TimestampType:146 - binding null to parameter: 7
+15:18:30,117 TRACE StringType:146 - binding null to parameter: 8
+15:18:30,136 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:18:30,137 TRACE StringType:153 - binding 'group description' to parameter: 2
+15:18:30,137 TRACE StringType:153 - binding 'groupName' to parameter: 3
+15:18:30,137 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:18:30,137 TRACE TimestampType:153 - binding '2013-04-11 15:18:30' to parameter: 5
+15:18:30,150 TRACE IntegerType:153 - binding '3' to parameter: 1
+15:18:30,151 TRACE IntegerType:153 - binding '5' to parameter: 2
+15:18:30,152 TRACE IntegerType:153 - binding '3' to parameter: 1
+15:18:30,152 TRACE IntegerType:153 - binding '6' to parameter: 2

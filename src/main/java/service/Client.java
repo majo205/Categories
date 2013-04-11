@@ -24,6 +24,12 @@ public class Client {
 	
 	public static void main(String[] args) throws ParseException {
 		
+//		odporucanz postup
+//		ApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
+//		SessionFactory sFactory = context.getBean("categorySessionFactory");
+//		Session session = sFactory.getCurrentSession();
+		
+		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy.mm.dd");
 		Timestamp date = new Timestamp(new Date().getTime());
 		List<Category> categoriesList = new ArrayList<Category>();
@@ -32,11 +38,18 @@ public class Client {
 		//sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
 		
 		//Session session = sessionFactory.openSession();
-		Session session = new AnnotationConfiguration().configure().buildSessionFactory().openSession();
+		//Session session = new AnnotationConfiguration().configure().buildSessionFactory().openSession();
+		
+	
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
-		Category category = (Category)context.getBean("category");
-		CategoryGroup group =(CategoryGroup)context.getBean("group");
+		
+		sessionFactory = (SessionFactory) context.getBean("categorySessionFactory");		
+		Session session = sessionFactory.openSession();//getCurrentSession();
+		
+		Category category = new Category();//(Category)context.getBean("category");
+		Category cat2= new Category("meno", "popis", 25);
+		CategoryGroup group = new CategoryGroup();//(CategoryGroup)context.getBean("group");
 		
 		category.setName("categoryName");
 		category.setDescription("category description");
@@ -49,6 +62,16 @@ public class Client {
 		
 		categoriesList.add(category);
 		
+//		category.setName("secondcategoryName");
+//		category.setDescription("secondcategory description");		
+//		category.setUpdateDate(new Date());		
+//		category.setPosition(10);
+		//new Category(name, description, parentCategory, position, updateDate, deleted, organisationId, uuid)
+		//categoriesList.add(new Category("secondcategoryName", "secondcategory description", null, 11, new Date(), null, null, "nejake ine uid"));
+		
+		
+		categoriesList.add(cat2);
+		
 		group.setName("groupName");	
 		group.setCategories(categoriesList);
 		group.setDescription("group description");
@@ -58,6 +81,7 @@ public class Client {
 		
 		session.beginTransaction();
 		session.save(category);
+		session.save(cat2);
 		session.save(group);
 		session.getTransaction().commit();
 		

@@ -16,7 +16,7 @@ public class CategoryGroup {
 	@Id
 	@Column (name="COMMN_CATG_GROUP_ID", nullable=false, length=38)
 	@GeneratedValue (strategy=GenerationType.IDENTITY)
-	private int categoryGroupId;
+	private Integer categoryGroupId;
 	
 	@Column (name="NAME", nullable=true, length=150)
 	private String name;
@@ -27,12 +27,12 @@ public class CategoryGroup {
 	@Column (name="UPDATED_DATE", nullable=true)
 	private Date updatedDate;
 	
-	@Column (name="DELETED", nullable=true)
+	@Column (name="DELETED", nullable=false)
 	@Type (type="true_false")
 	private boolean deleted; //yesorno
 	
 	@Column (name="ORGN_ID", nullable=true, length=10)
-	private int organizatonId;
+	private Integer organizatonId;
 	
 	@ManyToMany
 	@JoinTable(

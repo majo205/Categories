@@ -4,10 +4,10 @@ import entity.Category;
 
 public interface CategoryDao {
 	
-	Category findCategory();
+	Category find(Integer id);
 	
-	Category saveOrUpdateCategory();
+ 	Category saveOrUpdate(Category category);
 	
-	Category deleteCategory();
+	Category delete(Category category);
 
 }
