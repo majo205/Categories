@@ -7,7 +7,9 @@ import java.sql.Timestamp;
 import java.text.Format;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -24,6 +26,7 @@ public class Client {
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy.mm.dd");
 		Timestamp date = new Timestamp(new Date().getTime());
+		List<Category> categoriesList = new ArrayList<Category>();
 		
 		SessionFactory sessionFactory; 
 		//sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
@@ -44,8 +47,10 @@ public class Client {
 		category.setUuid("nejake uuid");		
 		category.setPosition(10);
 		
+		categoriesList.add(category);
 		
-		group.setName("groupName");		
+		group.setName("groupName");	
+		group.setCategories(categoriesList);
 		group.setDescription("group description");
 		group.setDeleted(false);		
 		group.setOrganizatonId(5);

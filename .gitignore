@@ -16,7 +16,8 @@ local.properties
 .settings/
 .loadpath
 target/*
-src/main/resources/*
+log/
+src\main\resources/
 
 # External tool builders
 .externalToolBuilders/

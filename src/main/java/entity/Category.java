@@ -1,6 +1,7 @@
 package entity;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -41,13 +42,13 @@ public class Category {
 	@Column (name="UUID", nullable=true, length=36)
 	private String uuid;
 	
-	@ManyToOne ()
-	@JoinTable(
-	    joinColumns = @JoinColumn(name = "commonCategoryId", 
-	                              referencedColumnName = "commonCategoryId"), 
-	    inverseJoinColumns = @JoinColumn(name = "categoryGroupId", 
-	                              referencedColumnName = "categoryGroupId"))
-		private CategoryGroup group;
+//	@ManyToOne //(targetEntity="")
+//	@JoinTable(name="COMMN_CATG_CATG_GRPS",
+//	    joinColumns = @JoinColumn(name = "COMMON_CATEGORY_ID", 
+//	                              referencedColumnName = "COMMON_CATEGORY_ID"), 
+//	    inverseJoinColumns = @JoinColumn(name = "COMMN_CATG_GROUP_ID", 
+//	                              referencedColumnName = "COMMN_CATG_GROUP_ID"))
+//		private List<CategoryGroup> group;
 
 	public int getCommonCategoryId() {
 		return commonCategoryId;
@@ -121,13 +122,13 @@ public class Category {
 		this.uuid = uuid;
 	}
 
-	public CategoryGroup getGroup() {
-		return group;
-	}
-
-	public void setGroup(CategoryGroup group) {
-		this.group = group;
-	}
+//	public List<CategoryGroup> getGroup() {
+//		return group;
+//	}
+//
+//	public void setGroup(List<CategoryGroup> group) {
+//		this.group = group;
+//	}
 	
 	
 		

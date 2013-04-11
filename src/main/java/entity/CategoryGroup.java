@@ -34,12 +34,12 @@ public class CategoryGroup {
 	@Column (name="ORGN_ID", nullable=true, length=10)
 	private int organizatonId;
 	
-	@OneToMany (mappedBy="category")
-//	@JoinTable(
-//			name="COMMN_CATG_CATG_GRS",
-//	    joinColumns = @JoinColumn(name = "COMMON_CATG_GROUP_ID"), 
-//	    inverseJoinColumns = @JoinColumn(name = "COMMON_CATEGORY_ID")
-//			)
+	@ManyToMany
+	@JoinTable(
+			name="COMMN_CATG_CATG_GRS",
+	    joinColumns = @JoinColumn(name = "COMMON_CATG_GROUP_ID"), 
+	    inverseJoinColumns = @JoinColumn(name = "COMMON_CATEGORY_ID")
+			)
 	private List<Category> categories;
 	
 	
@@ -79,6 +79,12 @@ public class CategoryGroup {
 	}
 	public void setOrganizatonId(int organizatonId) {
 		this.organizatonId = organizatonId;
+	}
+	public List<Category> getCategories() {
+		return categories;
+	}
+	public void setCategories(List<Category> categories) {
+		this.categories = categories;
 	}
 	
 }
