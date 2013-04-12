@@ -15,7 +15,7 @@ public class Category {
 	@Id
 	@Column(name = "COMMON_CATEGORY_ID", nullable = false, unique = true, length = 38)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer commonCategoryId;
+	private Integer categoryId;
 
 	@Column(name = "NAME", nullable = true, length = 150)
 	private String name;
@@ -59,7 +59,7 @@ public class Category {
 			int position, Date updateDate, boolean deleted, int organisationId,
 			String uuid) {
 		super();
-		this.commonCategoryId = commonCategoryId;
+		this.categoryId = categoryId;
 		this.name = name;
 		this.description = description;
 		this.parentCategory = parentCategory;
@@ -79,11 +79,11 @@ public class Category {
 	// private List<CategoryGroup> group;
 
 	public int getCommonCategoryId() {
-		return commonCategoryId;
+		return categoryId;
 	}
 
 	public void setCommonCategoryId(int commonCategoryId) {
-		this.commonCategoryId = commonCategoryId;
+		this.categoryId = commonCategoryId;
 	}
 
 	public String getName() {

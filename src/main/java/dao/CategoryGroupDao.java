@@ -6,8 +6,8 @@ public interface CategoryGroupDao {
 
 	CategoryGroup find(Integer id);
 
-	CategoryGroup saveOrUpdate(CategoryGroup group);
+	void saveOrUpdate(CategoryGroup group);
 
-	CategoryGroup delete(CategoryGroup group);
+	void delete(CategoryGroup group);
 
 }
