@@ -41,6 +41,9 @@ public class Category {
 
 	@Column(name = "UUID", nullable = true, length = 36)
 	private String uuid;
+	
+//	@Column(name = "GROUP_ID", nullable = true, length = 36)
+//	private CategoryGroup categoryGroup;
 
 	public Category(){
 		
@@ -59,7 +62,7 @@ public class Category {
 			int position, Date updateDate, boolean deleted, int organisationId,
 			String uuid) {
 		super();
-		this.categoryId = categoryId;
+		
 		this.name = name;
 		this.description = description;
 		this.parentCategory = parentCategory;
@@ -78,12 +81,12 @@ public class Category {
 	// referencedColumnName = "COMMN_CATG_GROUP_ID"))
 	// private List<CategoryGroup> group;
 
-	public int getCommonCategoryId() {
+	public int getCategoryId() {
 		return categoryId;
 	}
 
-	public void setCommonCategoryId(int commonCategoryId) {
-		this.categoryId = commonCategoryId;
+	public void setCommonCategoryId(int categoryId) {
+		this.categoryId = categoryId;
 	}
 
 	public String getName() {
@@ -101,6 +104,8 @@ public class Category {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
+	
 
 	public int getParentCategory() {
 		return parentCategory;

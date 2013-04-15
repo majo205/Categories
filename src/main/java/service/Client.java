@@ -17,6 +17,11 @@ import org.hibernate.cfg.AnnotationConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import assembler.CategoryAssembler;
+
+import dao.CategoryDaoImpl;
+import dto.CategoryDto;
+
 import entity.Category;
 import entity.CategoryGroup;
 
@@ -47,9 +52,11 @@ public class Client {
 		sessionFactory = (SessionFactory) context.getBean("categorySessionFactory");		
 		Session session = sessionFactory.openSession();//getCurrentSession();
 		
-		Category category = new Category();//(Category)context.getBean("category");
-		Category cat2= new Category("meno", "popis", 25);
+		CategoryDto category = new CategoryDto();//(Category)context.getBean("category");
+		CategoryDto cat2= new CategoryDto();
 		CategoryGroup group = new CategoryGroup();//(CategoryGroup)context.getBean("group");
+		
+		new Category("meno", "popis", 25);
 		
 		category.setName("categoryName");
 		category.setDescription("category description");
@@ -60,7 +67,9 @@ public class Client {
 		category.setUuid("nejake uuid");		
 		category.setPosition(10);
 		
-		categoriesList.add(category);
+		
+		
+		//categoriesList.add(category);
 		
 //		category.setName("secondcategoryName");
 //		category.setDescription("secondcategory description");		
@@ -70,7 +79,7 @@ public class Client {
 		//categoriesList.add(new Category("secondcategoryName", "secondcategory description", null, 11, new Date(), null, null, "nejake ine uid"));
 		
 		
-		categoriesList.add(cat2);
+		//categoriesList.add(cat2);
 		
 		group.setName("groupName");	
 		group.setCategories(categoriesList);
@@ -80,9 +89,13 @@ public class Client {
 		group.setUpdatedDate(new Date());
 		
 		session.beginTransaction();
-		session.save(category);
+		
+		session.save(new CategoryAssembler().assembleToEntity(category));
+		//session.save(category);
 		session.save(cat2);
 		session.save(group);
+		
+				
 		session.getTransaction().commit();
 		
 		session.close();

@@ -301,3 +301,71 @@ org.hibernate.TransientObjectException: object references an unsaved transient i
 15:18:30,151 TRACE IntegerType:153 - binding '5' to parameter: 2
 15:18:30,152 TRACE IntegerType:153 - binding '3' to parameter: 1
 15:18:30,152 TRACE IntegerType:153 - binding '6' to parameter: 2
+12:46:35,380 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+12:46:35,396 TRACE StringType:153 - binding 'category description' to parameter: 2
+12:46:35,396 TRACE StringType:153 - binding 'categoryName' to parameter: 3
+12:46:35,396 TRACE IntegerType:153 - binding '5' to parameter: 4
+12:46:35,396 TRACE IntegerType:153 - binding '7' to parameter: 5
+12:46:35,396 TRACE IntegerType:153 - binding '10' to parameter: 6
+12:46:35,397 TRACE TimestampType:153 - binding '2013-04-15 12:46:35' to parameter: 7
+12:46:35,405 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+12:46:35,493 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+12:46:35,493 TRACE StringType:153 - binding 'popis' to parameter: 2
+12:46:35,494 TRACE StringType:153 - binding 'meno' to parameter: 3
+12:46:35,494 TRACE IntegerType:146 - binding null to parameter: 4
+12:46:35,494 TRACE IntegerType:146 - binding null to parameter: 5
+12:46:35,494 TRACE IntegerType:153 - binding '25' to parameter: 6
+12:46:35,494 TRACE TimestampType:146 - binding null to parameter: 7
+12:46:35,494 TRACE StringType:146 - binding null to parameter: 8
+12:46:35,540 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+12:46:35,540 TRACE StringType:153 - binding 'group description' to parameter: 2
+12:46:35,540 TRACE StringType:153 - binding 'groupName' to parameter: 3
+12:46:35,541 TRACE IntegerType:153 - binding '5' to parameter: 4
+12:46:35,541 TRACE TimestampType:153 - binding '2013-04-15 12:46:35' to parameter: 5
+12:46:35,929 TRACE IntegerType:153 - binding '1' to parameter: 1
+12:46:35,988 TRACE TrueFalseType:195 - returning 'true' as column: DELETED5_0_
+12:46:35,989 TRACE StringType:195 - returning 'category description' as column: DESCRIPT3_5_0_
+12:46:35,989 TRACE StringType:195 - returning 'categoryName' as column: NAME5_0_
+12:46:35,989 TRACE IntegerType:195 - returning '5' as column: ORGN5_5_0_
+12:46:35,989 TRACE IntegerType:195 - returning '7' as column: PARENT6_5_0_
+12:46:35,989 TRACE IntegerType:195 - returning '10' as column: POSITION5_0_
+12:46:35,990 TRACE TimestampType:195 - returning '2013-04-11 15:12:30' as column: UPDATED8_5_0_
+12:46:35,991 TRACE StringType:195 - returning 'nejake uuid' as column: UUID5_0_
+12:46:36,042 TRACE IntegerType:153 - binding '9' to parameter: 1
+12:46:36,042 TRACE IntegerType:153 - binding '17' to parameter: 2
+12:46:36,043 TRACE IntegerType:153 - binding '9' to parameter: 1
+12:46:36,043 TRACE IntegerType:153 - binding '18' to parameter: 2
+12:47:33,571 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+12:47:33,574 TRACE StringType:153 - binding 'category description' to parameter: 2
+12:47:33,574 TRACE StringType:153 - binding 'categoryName' to parameter: 3
+12:47:33,574 TRACE IntegerType:153 - binding '5' to parameter: 4
+12:47:33,574 TRACE IntegerType:153 - binding '7' to parameter: 5
+12:47:33,574 TRACE IntegerType:153 - binding '10' to parameter: 6
+12:47:33,575 TRACE TimestampType:153 - binding '2013-04-15 12:47:33' to parameter: 7
+12:47:33,583 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+12:47:33,590 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+12:47:33,591 TRACE StringType:153 - binding 'popis' to parameter: 2
+12:47:33,591 TRACE StringType:153 - binding 'meno' to parameter: 3
+12:47:33,591 TRACE IntegerType:146 - binding null to parameter: 4
+12:47:33,591 TRACE IntegerType:146 - binding null to parameter: 5
+12:47:33,591 TRACE IntegerType:153 - binding '25' to parameter: 6
+12:47:33,591 TRACE TimestampType:146 - binding null to parameter: 7
+12:47:33,591 TRACE StringType:146 - binding null to parameter: 8
+12:47:33,611 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+12:47:33,611 TRACE StringType:153 - binding 'group description' to parameter: 2
+12:47:33,611 TRACE StringType:153 - binding 'groupName' to parameter: 3
+12:47:33,612 TRACE IntegerType:153 - binding '5' to parameter: 4
+12:47:33,612 TRACE TimestampType:153 - binding '2013-04-15 12:47:33' to parameter: 5
+12:47:33,900 TRACE IntegerType:153 - binding '1' to parameter: 1
+12:47:33,904 TRACE TrueFalseType:195 - returning 'true' as column: DELETED5_0_
+12:47:33,905 TRACE StringType:195 - returning 'category description' as column: DESCRIPT3_5_0_
+12:47:33,905 TRACE StringType:195 - returning 'categoryName' as column: NAME5_0_
+12:47:33,905 TRACE IntegerType:195 - returning '5' as column: ORGN5_5_0_
+12:47:33,905 TRACE IntegerType:195 - returning '7' as column: PARENT6_5_0_
+12:47:33,905 TRACE IntegerType:195 - returning '10' as column: POSITION5_0_
+12:47:33,906 TRACE TimestampType:195 - returning '2013-04-11 15:12:30' as column: UPDATED8_5_0_
+12:47:33,906 TRACE StringType:195 - returning 'nejake uuid' as column: UUID5_0_
+12:47:33,943 TRACE IntegerType:153 - binding '10' to parameter: 1
+12:47:33,944 TRACE IntegerType:153 - binding '19' to parameter: 2
+12:47:33,945 TRACE IntegerType:153 - binding '10' to parameter: 1
+12:47:33,945 TRACE IntegerType:153 - binding '20' to parameter: 2

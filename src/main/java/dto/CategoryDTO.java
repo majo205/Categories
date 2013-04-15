@@ -2,7 +2,7 @@ package dto;
 
 import java.util.Date;
 
-public class CategoryDTO {
+public class CategoryDto {
 	
 	
 	private Integer categoryId;	
@@ -16,10 +16,11 @@ public class CategoryDTO {
 	private String uuid;
 	
 	
-	public Integer getCommonCategoryId() {
+	
+	public Integer getCategoryId() {
 		return categoryId;
 	}
-	public void setCommonCategoryId(Integer commonCategoryId) {
+	public void setCategoryId(Integer commonCategoryId) {
 		this.categoryId = commonCategoryId;
 	}
 	public String getName() {

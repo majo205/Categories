@@ -11,7 +11,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import dto.CategoryDTO;
+import dto.CategoryDto;
 
 import assembler.CategoryAssembler;
 
@@ -40,7 +40,7 @@ public class Service {
 
 		session.beginTransaction();
 
-		CategoryDTO categoryDto = new CategoryDTO();// (Category)context.getBean("category");
+		CategoryDto categoryDto = new CategoryDto();// (Category)context.getBean("category");
 		Category cat2 = new Category("meno", "popis", 25);
 		CategoryGroup group = new CategoryGroup();// (CategoryGroup)context.getBean("group");
 

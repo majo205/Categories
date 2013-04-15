@@ -1,8 +1,11 @@
 package dto;
 
 import java.util.Date;
+import java.util.List;
 
-public class CategoryGroupDTO {
+import entity.Category;
+
+public class CategoryGroupDto {
 
 	
 	private Integer categoryGroupId;	
@@ -11,6 +14,7 @@ public class CategoryGroupDTO {
 	private Date updatedDate;
 	private boolean deleted;	
 	private Integer organizatonId;
+	private List<Category> categories;
 	
 	
 	public Integer getCategoryGroupId() {
@@ -48,6 +52,12 @@ public class CategoryGroupDTO {
 	}
 	public void setOrganizatonId(Integer organizatonId) {
 		this.organizatonId = organizatonId;
+	}
+	public List<Category> getCategories() {
+		return categories;
+	}
+	public void setCategories(List<Category> categories) {
+		this.categories = categories;
 	}
 	
 	
