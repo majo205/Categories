@@ -59,6 +59,14 @@ public class CategoryGroupDto {
 	public void setCategories(List<Category> categories) {
 		this.categories = categories;
 	}
+	@Override
+	public String toString() {
+		return "CategoryGroupDto [categoryGroupId=" + categoryGroupId
+				+ ", name=" + name + ", description=" + description
+				+ ", updatedDate=" + updatedDate + ", deleted=" + deleted
+				+ ", organizatonId=" + organizatonId + ", categories="
+				+ categories + "]";
+	}
 	
 	
 	

@@ -1,6 +1,9 @@
 package dto;
 
 import java.util.Date;
+import java.util.List;
+
+import entity.CategoryGroup;
 
 public class CategoryDto {
 	
@@ -14,9 +17,25 @@ public class CategoryDto {
 	private boolean deleted; 	
 	private Integer organisationId;	
 	private String uuid;
+	private List<CategoryGroup> groups;
 	
+	public CategoryDto(){
+		
+	}
 	
-	
+	public void setCategoryDto(String name, String description, Integer parentCategory,
+			Integer position, Date updateDate, boolean deleted,
+			Integer organisationId, String uuid) {
+		
+		this.name = name;
+		this.description = description;
+		this.parentCategory = parentCategory;
+		this.position = position;
+		this.updateDate = updateDate;
+		this.deleted = deleted;
+		this.organisationId = organisationId;
+		this.uuid = uuid;
+	}
 	public Integer getCategoryId() {
 		return categoryId;
 	}
@@ -70,6 +89,22 @@ public class CategoryDto {
 	}
 	public void setUuid(String uuid) {
 		this.uuid = uuid;
+	}
+	@Override
+	public String toString() {
+		return "CategoryDto [categoryId=" + categoryId + ", name=" + name
+				+ ", description=" + description + ", parentCategory="
+				+ parentCategory + ", position=" + position + ", updateDate="
+				+ updateDate + ", deleted=" + deleted + ", organisationId="
+				+ organisationId + ", uuid=" + uuid + "]";
+	}
+
+	public List<CategoryGroup> getGroups() {
+		return groups;
+	}
+
+	public void setGroups(List<CategoryGroup> groups) {
+		this.groups = groups;
 	}
 
 

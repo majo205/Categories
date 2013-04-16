@@ -20,7 +20,7 @@ public class CategoryGroupAssembler {
 
 		List<CategoryGroupDto> resultDtoList = new ArrayList<CategoryGroupDto>();
 
-		for (CategoryGroup categoryGroup : categoryGroupList) {			
+		for (CategoryGroup categoryGroup : categoryGroupList) {
 
 			resultDtoList.add(setDto(categoryGroup));
 
@@ -31,7 +31,7 @@ public class CategoryGroupAssembler {
 
 	public CategoryGroup assembleToEntity(CategoryGroupDto categoryGroupDTO) {
 
-		CategoryGroup resultEntity = new CategoryGroup();		
+		CategoryGroup resultEntity = new CategoryGroup();
 
 		return setEntity(categoryGroupDTO);
 
@@ -43,7 +43,7 @@ public class CategoryGroupAssembler {
 		List<CategoryGroup> resultEntityList = new ArrayList<CategoryGroup>();
 
 		for (CategoryGroupDto categoryGroupDTO : categoryGroupDTOList) {
-			
+
 			resultEntityList.add(setEntity(categoryGroupDTO));
 		}
 		return resultEntityList;
@@ -51,9 +51,9 @@ public class CategoryGroupAssembler {
 	}
 
 	private CategoryGroupDto setDto(CategoryGroup categoryGroup) {
-		
+
 		CategoryGroupDto resultDto = new CategoryGroupDto();
-		
+
 		resultDto.setCategoryGroupId(categoryGroup.getCategoryGroupId());
 		resultDto.setDeleted(categoryGroup.getDeleted());
 		resultDto.setDescription(categoryGroup.getDescription());
@@ -61,22 +61,26 @@ public class CategoryGroupAssembler {
 		resultDto.setOrganizatonId(categoryGroup.getOrganizatonId());
 		resultDto.setUpdatedDate(categoryGroup.getUpdatedDate());
 		resultDto.setCategories(categoryGroup.getCategories());
-		
+
 		return resultDto;
 	}
 
 	private CategoryGroup setEntity(CategoryGroupDto categoryGroupDTO) {
-		
+
 		CategoryGroup resultEntity;
-		
-		if((new CategoryGroupDaoImpl().find(categoryGroupDTO.getCategoryGroupId()))!=null){
-			
-			resultEntity = new CategoryGroupDaoImpl().find(categoryGroupDTO.getCategoryGroupId());
-		}else{
+		CategoryGroupDaoImpl groupDao = new CategoryGroupDaoImpl();
+
+		if ((groupDao.find(categoryGroupDTO
+				.getCategoryGroupId())) != null) {
+
+			resultEntity = groupDao.find(categoryGroupDTO
+					.getCategoryGroupId());
+		} else {
 			resultEntity = new CategoryGroup();
-			resultEntity.setCategoryGroupId(categoryGroupDTO.getCategoryGroupId());
+			resultEntity.setCategoryGroupId(categoryGroupDTO
+					.getCategoryGroupId());
 		}
-		
+
 		resultEntity.setCategoryGroupId(categoryGroupDTO.getCategoryGroupId());
 		resultEntity.setDeleted(categoryGroupDTO.isDeleted());
 		resultEntity.setDescription(categoryGroupDTO.getDescription());
@@ -84,7 +88,7 @@ public class CategoryGroupAssembler {
 		resultEntity.setOrganizatonId(categoryGroupDTO.getOrganizatonId());
 		resultEntity.setUpdatedDate(categoryGroupDTO.getUpdatedDate());
 		resultEntity.setCategories(categoryGroupDTO.getCategories());
-		
+
 		return resultEntity;
 	}
 

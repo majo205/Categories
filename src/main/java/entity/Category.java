@@ -14,7 +14,7 @@ public class Category {
 
 	@Id
 	@Column(name = "COMMON_CATEGORY_ID", nullable = false, unique = true, length = 38)
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer categoryId;
 
 	@Column(name = "NAME", nullable = true, length = 150)
@@ -44,6 +44,9 @@ public class Category {
 	
 //	@Column(name = "GROUP_ID", nullable = true, length = 36)
 //	private CategoryGroup categoryGroup;
+	
+	@ManyToMany(mappedBy="categories")
+	private List<CategoryGroup> groups;
 
 	public Category(){
 		
@@ -85,7 +88,7 @@ public class Category {
 		return categoryId;
 	}
 
-	public void setCommonCategoryId(int categoryId) {
+	public void setCategoryId(int categoryId) {
 		this.categoryId = categoryId;
 	}
 
@@ -153,6 +156,26 @@ public class Category {
 
 	public void setUuid(String uuid) {
 		this.uuid = uuid;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Category [categoryId=" + categoryId + ", name=" + name
+				+ ", description=" + description + ", parentCategory="
+				+ parentCategory + ", position=" + position + ", updateDate="
+				+ updateDate + ", deleted=" + deleted + ", organisationId="
+				+ organisationId + ", uuid=" + uuid + "]";
+	}
+
+
+	public List<CategoryGroup> getGroups() {
+		return groups;
+	}
+
+
+	public void setGroups(List<CategoryGroup> groups) {
+		this.groups = groups;
 	}
 
 	// public List<CategoryGroup> getGroup() {

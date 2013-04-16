@@ -1,12 +1,18 @@
 package entity;
 
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 
-import org.hibernate.annotations.Index;
 import org.hibernate.annotations.Type;
 
 @Entity
@@ -85,6 +91,13 @@ public class CategoryGroup {
 	}
 	public void setCategories(List<Category> categories) {
 		this.categories = categories;
+	}
+	@Override
+	public String toString() {
+		return "CategoryGroup [categoryGroupId=" + categoryGroupId + ", name="
+				+ name + ", description=" + description + ", updatedDate="
+				+ updatedDate + ", deleted=" + deleted + ", organizatonId="
+				+ organizatonId + ", categories=" + categories + "]";
 	}
 	
 }

@@ -369,3 +369,600 @@ org.hibernate.TransientObjectException: object references an unsaved transient i
 12:47:33,944 TRACE IntegerType:153 - binding '19' to parameter: 2
 12:47:33,945 TRACE IntegerType:153 - binding '10' to parameter: 1
 12:47:33,945 TRACE IntegerType:153 - binding '20' to parameter: 2
+10:02:52,094 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:02:52,351 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:02:52,392 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+10:02:52,392 TRACE StringType:153 - binding 'NEWcategory descriptionCHANGED' to parameter: 2
+10:02:52,393 TRACE StringType:153 - binding 'NEWcategoryNameCHANGED' to parameter: 3
+10:02:52,393 TRACE IntegerType:153 - binding '5' to parameter: 4
+10:02:52,393 TRACE IntegerType:153 - binding '7' to parameter: 5
+10:02:52,393 TRACE IntegerType:153 - binding '10' to parameter: 6
+10:02:52,394 TRACE TimestampType:153 - binding '2013-04-16 10:02:51' to parameter: 7
+10:02:52,401 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+10:02:52,401 TRACE IntegerType:153 - binding '50' to parameter: 9
+10:02:52,404 ERROR AbstractBatcher:73 - Exception executing batch: 
+org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85)
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70)
+	at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:262)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:179)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at service.Service.saveOrUpdate(Service.java:24)
+	at service.Client.main(Client.java:93)
+10:02:52,406 ERROR AbstractFlushingEventListener:324 - Could not synchronize database state with session
+org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85)
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70)
+	at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:262)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:179)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at service.Service.saveOrUpdate(Service.java:24)
+	at service.Client.main(Client.java:93)
+10:04:46,997 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:04:47,241 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:04:47,283 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+10:04:47,284 TRACE StringType:153 - binding 'NEWcategory descriptionCHANGED' to parameter: 2
+10:04:47,284 TRACE StringType:153 - binding 'NEWcategoryNameCHANGED' to parameter: 3
+10:04:47,284 TRACE IntegerType:153 - binding '5' to parameter: 4
+10:04:47,284 TRACE IntegerType:153 - binding '7' to parameter: 5
+10:04:47,284 TRACE IntegerType:153 - binding '10' to parameter: 6
+10:04:47,285 TRACE TimestampType:153 - binding '2013-04-16 10:04:46' to parameter: 7
+10:04:47,293 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+10:04:47,293 TRACE IntegerType:153 - binding '50' to parameter: 9
+10:04:47,295 ERROR AbstractBatcher:73 - Exception executing batch: 
+org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85)
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70)
+	at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:262)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:179)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at service.Service.saveOrUpdate(Service.java:24)
+	at service.Client.main(Client.java:93)
+10:04:47,297 ERROR AbstractFlushingEventListener:324 - Could not synchronize database state with session
+org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85)
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70)
+	at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:262)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:179)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at service.Service.saveOrUpdate(Service.java:24)
+	at service.Client.main(Client.java:93)
+10:05:20,316 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:05:20,565 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:07:04,828 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:07:05,060 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:09:54,465 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:09:54,718 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:11:57,527 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:11:57,778 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:14:22,824 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:14:23,065 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:14:44,974 TRACE IntegerType:153 - binding '5' to parameter: 1
+10:14:44,983 TRACE TrueFalseType:195 - returning 'true' as column: DELETED10_0_
+10:14:44,984 TRACE StringType:195 - returning 'category description' as column: DESCRIPT3_10_0_
+10:14:44,984 TRACE StringType:195 - returning 'categoryName' as column: NAME10_0_
+10:14:44,984 TRACE IntegerType:195 - returning '5' as column: ORGN5_10_0_
+10:14:44,984 TRACE IntegerType:195 - returning '7' as column: PARENT6_10_0_
+10:14:44,984 TRACE IntegerType:195 - returning '10' as column: POSITION10_0_
+10:14:44,991 TRACE TimestampType:195 - returning '2013-04-11 15:18:30' as column: UPDATED8_10_0_
+10:14:44,992 TRACE StringType:195 - returning 'nejake uuid' as column: UUID10_0_
+10:14:45,199 TRACE IntegerType:153 - binding '5' to parameter: 1
+10:14:45,200 TRACE TrueFalseType:195 - returning 'true' as column: DELETED15_0_
+10:14:45,201 TRACE StringType:195 - returning 'category description' as column: DESCRIPT3_15_0_
+10:14:45,201 TRACE StringType:195 - returning 'categoryName' as column: NAME15_0_
+10:14:45,201 TRACE IntegerType:195 - returning '5' as column: ORGN5_15_0_
+10:14:45,201 TRACE IntegerType:195 - returning '7' as column: PARENT6_15_0_
+10:14:45,201 TRACE IntegerType:195 - returning '10' as column: POSITION15_0_
+10:14:45,202 TRACE TimestampType:195 - returning '2013-04-11 15:18:30' as column: UPDATED8_15_0_
+10:14:45,202 TRACE StringType:195 - returning 'nejake uuid' as column: UUID15_0_
+10:15:04,583 TRACE IntegerType:153 - binding '5' to parameter: 1
+10:15:04,609 TRACE TrueFalseType:195 - returning 'true' as column: DELETED10_0_
+10:15:04,609 TRACE StringType:195 - returning 'category description' as column: DESCRIPT3_10_0_
+10:15:04,609 TRACE StringType:195 - returning 'categoryName' as column: NAME10_0_
+10:15:04,609 TRACE IntegerType:195 - returning '5' as column: ORGN5_10_0_
+10:15:04,609 TRACE IntegerType:195 - returning '7' as column: PARENT6_10_0_
+10:15:04,610 TRACE IntegerType:195 - returning '10' as column: POSITION10_0_
+10:15:04,617 TRACE TimestampType:195 - returning '2013-04-11 15:18:30' as column: UPDATED8_10_0_
+10:15:04,618 TRACE StringType:195 - returning 'nejake uuid' as column: UUID10_0_
+10:15:04,864 TRACE IntegerType:153 - binding '5' to parameter: 1
+10:15:04,865 TRACE TrueFalseType:195 - returning 'true' as column: DELETED15_0_
+10:15:04,865 TRACE StringType:195 - returning 'category description' as column: DESCRIPT3_15_0_
+10:15:04,866 TRACE StringType:195 - returning 'categoryName' as column: NAME15_0_
+10:15:04,866 TRACE IntegerType:195 - returning '5' as column: ORGN5_15_0_
+10:15:04,866 TRACE IntegerType:195 - returning '7' as column: PARENT6_15_0_
+10:15:04,866 TRACE IntegerType:195 - returning '10' as column: POSITION15_0_
+10:15:04,868 TRACE TimestampType:195 - returning '2013-04-11 15:18:30' as column: UPDATED8_15_0_
+10:15:04,868 TRACE StringType:195 - returning 'nejake uuid' as column: UUID15_0_
+10:15:04,905 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+10:15:04,906 TRACE StringType:153 - binding 'NEWcategory descriptionCHANGED' to parameter: 2
+10:15:04,906 TRACE StringType:153 - binding 'NEWcategoryNameCHANGED' to parameter: 3
+10:15:04,906 TRACE IntegerType:153 - binding '5' to parameter: 4
+10:15:04,906 TRACE IntegerType:153 - binding '7' to parameter: 5
+10:15:04,906 TRACE IntegerType:153 - binding '10' to parameter: 6
+10:15:04,906 TRACE TimestampType:153 - binding '2013-04-16 10:15:04' to parameter: 7
+10:15:04,908 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+10:15:04,908 TRACE IntegerType:153 - binding '5' to parameter: 9
+10:31:26,736 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+10:31:26,739 TRACE StringType:153 - binding 'NEWcategory descriptionCHANGED' to parameter: 2
+10:31:26,739 TRACE StringType:153 - binding 'NEWcategoryNameCHANGED' to parameter: 3
+10:31:26,740 TRACE IntegerType:153 - binding '5' to parameter: 4
+10:31:26,740 TRACE IntegerType:153 - binding '7' to parameter: 5
+10:31:26,740 TRACE IntegerType:153 - binding '10' to parameter: 6
+10:31:26,740 TRACE TimestampType:153 - binding '2013-04-16 10:31:26' to parameter: 7
+10:31:26,749 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+10:31:54,497 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:31:54,741 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:31:54,781 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+10:31:54,782 TRACE StringType:153 - binding 'NEWcategory descriptionCHANGED' to parameter: 2
+10:31:54,782 TRACE StringType:153 - binding 'NEWcategoryNameCHANGED' to parameter: 3
+10:31:54,782 TRACE IntegerType:153 - binding '5' to parameter: 4
+10:31:54,782 TRACE IntegerType:153 - binding '7' to parameter: 5
+10:31:54,782 TRACE IntegerType:153 - binding '10' to parameter: 6
+10:31:54,783 TRACE TimestampType:153 - binding '2013-04-16 10:31:54' to parameter: 7
+10:31:54,790 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+10:31:54,791 TRACE IntegerType:153 - binding '50' to parameter: 9
+10:31:54,794 ERROR AbstractBatcher:73 - Exception executing batch: 
+org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85)
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70)
+	at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:262)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:179)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at service.Service.saveOrUpdate(Service.java:24)
+	at service.Client.main(Client.java:87)
+10:31:54,797 ERROR AbstractFlushingEventListener:324 - Could not synchronize database state with session
+org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85)
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70)
+	at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:262)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:179)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at service.Service.saveOrUpdate(Service.java:24)
+	at service.Client.main(Client.java:87)
+10:33:14,649 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+10:33:14,653 TRACE StringType:153 - binding 'NEWcategory descriptionCHANGED' to parameter: 2
+10:33:14,653 TRACE StringType:153 - binding 'NEWcategoryNameCHANGED' to parameter: 3
+10:33:14,653 TRACE IntegerType:153 - binding '5' to parameter: 4
+10:33:14,653 TRACE IntegerType:153 - binding '7' to parameter: 5
+10:33:14,653 TRACE IntegerType:153 - binding '10' to parameter: 6
+10:33:14,654 TRACE TimestampType:153 - binding '2013-04-16 10:33:13' to parameter: 7
+10:33:14,662 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+10:38:17,832 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:38:18,076 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:38:18,116 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+10:38:18,117 TRACE StringType:153 - binding 'NEWcategory descriptionCHANGED' to parameter: 2
+10:38:18,117 TRACE StringType:153 - binding 'NEWcategoryNameCHANGED' to parameter: 3
+10:38:18,117 TRACE IntegerType:153 - binding '5' to parameter: 4
+10:38:18,117 TRACE IntegerType:153 - binding '7' to parameter: 5
+10:38:18,117 TRACE IntegerType:153 - binding '10' to parameter: 6
+10:38:18,118 TRACE TimestampType:153 - binding '2013-04-16 10:38:17' to parameter: 7
+10:38:18,126 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+10:38:18,126 TRACE IntegerType:153 - binding '50' to parameter: 9
+10:38:18,129 ERROR AbstractBatcher:73 - Exception executing batch: 
+org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85)
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70)
+	at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:262)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:179)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at service.Service.saveOrUpdate(Service.java:24)
+	at service.Client.main(Client.java:87)
+10:38:18,131 ERROR AbstractFlushingEventListener:324 - Could not synchronize database state with session
+org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85)
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70)
+	at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:262)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:179)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at service.Service.saveOrUpdate(Service.java:24)
+	at service.Client.main(Client.java:87)
+10:38:44,389 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:38:44,629 TRACE IntegerType:153 - binding '50' to parameter: 1
+10:38:44,666 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+10:38:44,667 TRACE StringType:153 - binding 'NEWcategory descriptionCHANGED' to parameter: 2
+10:38:44,667 TRACE StringType:153 - binding 'NEWcategoryNameCHANGED' to parameter: 3
+10:38:44,667 TRACE IntegerType:153 - binding '5' to parameter: 4
+10:38:44,667 TRACE IntegerType:153 - binding '7' to parameter: 5
+10:38:44,667 TRACE IntegerType:153 - binding '10' to parameter: 6
+10:38:44,668 TRACE TimestampType:153 - binding '2013-04-16 10:38:43' to parameter: 7
+10:38:44,676 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+11:03:35,700 TRACE IntegerType:153 - binding '1' to parameter: 1
+11:03:35,710 TRACE TrueFalseType:195 - returning 'true' as column: DELETED5_0_
+11:03:35,710 TRACE StringType:195 - returning 'category descriptionCHANGED' as column: DESCRIPT3_5_0_
+11:03:35,710 TRACE StringType:195 - returning 'categoryNameCHANGED' as column: NAME5_0_
+11:03:35,710 TRACE IntegerType:195 - returning '5' as column: ORGN5_5_0_
+11:03:35,711 TRACE IntegerType:195 - returning '7' as column: PARENT6_5_0_
+11:03:35,711 TRACE IntegerType:195 - returning '10' as column: POSITION5_0_
+11:03:35,718 TRACE TimestampType:195 - returning '2013-04-16 09:23:56' as column: UPDATED8_5_0_
+11:03:35,718 TRACE StringType:195 - returning 'nejake uuid' as column: UUID5_0_
+11:04:24,429 TRACE IntegerType:153 - binding '1' to parameter: 1
+11:04:24,438 TRACE TrueFalseType:195 - returning 'true' as column: DELETED5_0_
+11:04:24,439 TRACE StringType:195 - returning 'category descriptionCHANGED' as column: DESCRIPT3_5_0_
+11:04:24,439 TRACE StringType:195 - returning 'categoryNameCHANGED' as column: NAME5_0_
+11:04:24,439 TRACE IntegerType:195 - returning '5' as column: ORGN5_5_0_
+11:04:24,439 TRACE IntegerType:195 - returning '7' as column: PARENT6_5_0_
+11:04:24,439 TRACE IntegerType:195 - returning '10' as column: POSITION5_0_
+11:04:24,446 TRACE TimestampType:195 - returning '2013-04-16 09:23:56' as column: UPDATED8_5_0_
+11:04:24,446 TRACE StringType:195 - returning 'nejake uuid' as column: UUID5_0_
+11:06:15,370 TRACE IntegerType:153 - binding '23' to parameter: 1
+11:06:15,378 TRACE TrueFalseType:195 - returning 'true' as column: DELETED5_0_
+11:06:15,379 TRACE StringType:195 - returning 'NEWcategory descriptionCHANGED' as column: DESCRIPT3_5_0_
+11:06:15,379 TRACE StringType:195 - returning 'NEWcategoryNameCHANGED' as column: NAME5_0_
+11:06:15,379 TRACE IntegerType:195 - returning '5' as column: ORGN5_5_0_
+11:06:15,379 TRACE IntegerType:195 - returning '7' as column: PARENT6_5_0_
+11:06:15,379 TRACE IntegerType:195 - returning '10' as column: POSITION5_0_
+11:06:15,387 TRACE TimestampType:195 - returning '2013-04-16 10:38:43' as column: UPDATED8_5_0_
+11:06:15,387 TRACE StringType:195 - returning 'nejake uuid' as column: UUID5_0_
+11:06:15,633 TRACE IntegerType:153 - binding '23' to parameter: 1
+11:06:15,634 TRACE TrueFalseType:195 - returning 'true' as column: DELETED10_0_
+11:06:15,635 TRACE StringType:195 - returning 'NEWcategory descriptionCHANGED' as column: DESCRIPT3_10_0_
+11:06:15,635 TRACE StringType:195 - returning 'NEWcategoryNameCHANGED' as column: NAME10_0_
+11:06:15,635 TRACE IntegerType:195 - returning '5' as column: ORGN5_10_0_
+11:06:15,635 TRACE IntegerType:195 - returning '7' as column: PARENT6_10_0_
+11:06:15,635 TRACE IntegerType:195 - returning '10' as column: POSITION10_0_
+11:06:15,637 TRACE TimestampType:195 - returning '2013-04-16 10:38:43' as column: UPDATED8_10_0_
+11:06:15,637 TRACE StringType:195 - returning 'nejake uuid' as column: UUID10_0_
+11:06:16,039 TRACE IntegerType:153 - binding '23' to parameter: 1
+11:06:16,040 TRACE TrueFalseType:195 - returning 'true' as column: DELETED20_0_
+11:06:16,040 TRACE StringType:195 - returning 'NEWcategory descriptionCHANGED' as column: DESCRIPT3_20_0_
+11:06:16,040 TRACE StringType:195 - returning 'NEWcategoryNameCHANGED' as column: NAME20_0_
+11:06:16,040 TRACE IntegerType:195 - returning '5' as column: ORGN5_20_0_
+11:06:16,041 TRACE IntegerType:195 - returning '7' as column: PARENT6_20_0_
+11:06:16,041 TRACE IntegerType:195 - returning '10' as column: POSITION20_0_
+11:06:16,041 TRACE TimestampType:195 - returning '2013-04-16 10:38:43' as column: UPDATED8_20_0_
+11:06:16,041 TRACE StringType:195 - returning 'nejake uuid' as column: UUID20_0_
+11:06:16,267 TRACE IntegerType:153 - binding '23' to parameter: 1
+11:06:16,268 TRACE TrueFalseType:195 - returning 'true' as column: DELETED25_0_
+11:06:16,268 TRACE StringType:195 - returning 'NEWcategory descriptionCHANGED' as column: DESCRIPT3_25_0_
+11:06:16,269 TRACE StringType:195 - returning 'NEWcategoryNameCHANGED' as column: NAME25_0_
+11:06:16,269 TRACE IntegerType:195 - returning '5' as column: ORGN5_25_0_
+11:06:16,269 TRACE IntegerType:195 - returning '7' as column: PARENT6_25_0_
+11:06:16,269 TRACE IntegerType:195 - returning '10' as column: POSITION25_0_
+11:06:16,269 TRACE TimestampType:195 - returning '2013-04-16 10:38:43' as column: UPDATED8_25_0_
+11:06:16,270 TRACE StringType:195 - returning 'nejake uuid' as column: UUID25_0_
+11:06:16,287 TRACE IntegerType:153 - binding '23' to parameter: 1
+11:06:16,492 TRACE IntegerType:153 - binding '23' to parameter: 1
+13:13:51,300 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+13:13:51,316 TRACE StringType:153 - binding 'test descr' to parameter: 2
+13:13:51,316 TRACE StringType:153 - binding 'taky name' to parameter: 3
+13:13:51,316 TRACE IntegerType:153 - binding '1007' to parameter: 4
+13:13:51,316 TRACE IntegerType:153 - binding '7' to parameter: 5
+13:13:51,316 TRACE IntegerType:153 - binding '2' to parameter: 6
+13:13:51,317 TRACE TimestampType:153 - binding '2013-04-16 13:13:50' to parameter: 7
+13:13:51,325 TRACE StringType:153 - binding 'uuid lol' to parameter: 8
+13:13:51,590 TRACE IntegerType:153 - binding '23' to parameter: 1
+13:14:41,083 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+13:14:41,089 TRACE StringType:153 - binding 'test descr' to parameter: 2
+13:14:41,089 TRACE StringType:153 - binding 'taky name' to parameter: 3
+13:14:41,090 TRACE IntegerType:153 - binding '1007' to parameter: 4
+13:14:41,090 TRACE IntegerType:153 - binding '7' to parameter: 5
+13:14:41,090 TRACE IntegerType:153 - binding '2' to parameter: 6
+13:14:41,091 TRACE TimestampType:153 - binding '2013-04-16 13:14:40' to parameter: 7
+13:14:41,100 TRACE StringType:153 - binding 'uuid lol' to parameter: 8
+13:15:56,160 TRACE IntegerType:153 - binding '50' to parameter: 1
+13:15:56,229 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+13:15:56,230 TRACE StringType:153 - binding 'test descr' to parameter: 2
+13:15:56,230 TRACE StringType:153 - binding 'taky name' to parameter: 3
+13:15:56,230 TRACE IntegerType:153 - binding '1007' to parameter: 4
+13:15:56,230 TRACE IntegerType:153 - binding '7' to parameter: 5
+13:15:56,230 TRACE IntegerType:153 - binding '2' to parameter: 6
+13:15:56,231 TRACE TimestampType:153 - binding '2013-04-16 13:15:55' to parameter: 7
+13:15:56,238 TRACE StringType:153 - binding 'uuid lol' to parameter: 8
+13:15:56,238 TRACE IntegerType:153 - binding '50' to parameter: 9
+13:15:56,278 ERROR AbstractBatcher:73 - Exception executing batch: 
+org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85)
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70)
+	at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:262)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:179)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at service.Service.saveOrUpdate(Service.java:24)
+	at service.Client.main(Client.java:93)
+13:15:56,280 ERROR AbstractFlushingEventListener:324 - Could not synchronize database state with session
+org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85)
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70)
+	at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:262)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:179)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at service.Service.saveOrUpdate(Service.java:24)
+	at service.Client.main(Client.java:93)
+13:16:25,935 TRACE IntegerType:153 - binding '50' to parameter: 1
+13:16:26,007 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+13:16:26,008 TRACE StringType:153 - binding 'test descr' to parameter: 2
+13:16:26,008 TRACE StringType:153 - binding 'taky name' to parameter: 3
+13:16:26,008 TRACE IntegerType:153 - binding '1007' to parameter: 4
+13:16:26,008 TRACE IntegerType:153 - binding '7' to parameter: 5
+13:16:26,008 TRACE IntegerType:153 - binding '2' to parameter: 6
+13:16:26,009 TRACE TimestampType:153 - binding '2013-04-16 13:16:25' to parameter: 7
+13:16:26,018 TRACE StringType:153 - binding 'uuid lol' to parameter: 8
+13:16:26,019 TRACE IntegerType:153 - binding '50' to parameter: 9
+13:16:26,024 ERROR AbstractBatcher:73 - Exception executing batch: 
+org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85)
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70)
+	at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:262)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:179)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at service.Service.saveOrUpdate(Service.java:24)
+	at service.Client.main(Client.java:93)
+13:16:26,026 ERROR AbstractFlushingEventListener:324 - Could not synchronize database state with session
+org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85)
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70)
+	at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:262)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:179)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at service.Service.saveOrUpdate(Service.java:24)
+	at service.Client.main(Client.java:93)
+13:16:48,835 TRACE IntegerType:153 - binding '50' to parameter: 1
+13:16:48,923 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+13:16:48,923 TRACE StringType:153 - binding 'test descr' to parameter: 2
+13:16:48,923 TRACE StringType:153 - binding 'taky name' to parameter: 3
+13:16:48,923 TRACE IntegerType:153 - binding '1007' to parameter: 4
+13:16:48,923 TRACE IntegerType:153 - binding '7' to parameter: 5
+13:16:48,923 TRACE IntegerType:153 - binding '2' to parameter: 6
+13:16:48,924 TRACE TimestampType:153 - binding '2013-04-16 13:16:48' to parameter: 7
+13:16:48,933 TRACE StringType:153 - binding 'uuid lol' to parameter: 8
+13:16:48,933 TRACE IntegerType:153 - binding '50' to parameter: 9
+13:16:48,938 ERROR AbstractBatcher:73 - Exception executing batch: 
+org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85)
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70)
+	at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:262)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:179)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at service.Service.saveOrUpdate(Service.java:24)
+	at service.Client.main(Client.java:93)
+13:16:48,941 ERROR AbstractFlushingEventListener:324 - Could not synchronize database state with session
+org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85)
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70)
+	at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:262)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:179)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at service.Service.saveOrUpdate(Service.java:24)
+	at service.Client.main(Client.java:93)
+13:22:19,672 TRACE IntegerType:153 - binding '50' to parameter: 1
+13:22:19,742 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+13:22:19,743 TRACE StringType:153 - binding 'test descr' to parameter: 2
+13:22:19,743 TRACE StringType:153 - binding 'taky name' to parameter: 3
+13:22:19,743 TRACE IntegerType:153 - binding '1007' to parameter: 4
+13:22:19,743 TRACE IntegerType:153 - binding '7' to parameter: 5
+13:22:19,743 TRACE IntegerType:153 - binding '2' to parameter: 6
+13:22:19,744 TRACE TimestampType:153 - binding '2013-04-16 13:22:19' to parameter: 7
+13:22:19,752 TRACE StringType:153 - binding 'uuid lol' to parameter: 8
+13:24:51,731 TRACE IntegerType:153 - binding '50' to parameter: 1
+13:24:51,774 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+13:24:51,774 TRACE StringType:153 - binding 'test descr' to parameter: 2
+13:24:51,774 TRACE StringType:153 - binding 'taky name' to parameter: 3
+13:24:51,775 TRACE IntegerType:153 - binding '1007' to parameter: 4
+13:24:51,775 TRACE IntegerType:153 - binding '7' to parameter: 5
+13:24:51,775 TRACE IntegerType:153 - binding '2' to parameter: 6
+13:24:51,775 TRACE TimestampType:153 - binding '2013-04-16 13:24:51' to parameter: 7
+13:24:51,782 TRACE StringType:153 - binding 'uuid lol' to parameter: 8
+13:25:09,014 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+13:25:09,017 TRACE StringType:153 - binding 'test descr' to parameter: 2
+13:25:09,018 TRACE StringType:153 - binding 'taky name' to parameter: 3
+13:25:09,018 TRACE IntegerType:153 - binding '1007' to parameter: 4
+13:25:09,018 TRACE IntegerType:153 - binding '7' to parameter: 5
+13:25:09,018 TRACE IntegerType:153 - binding '2' to parameter: 6
+13:25:09,019 TRACE TimestampType:153 - binding '2013-04-16 13:25:08' to parameter: 7
+13:25:09,027 TRACE StringType:153 - binding 'uuid lol' to parameter: 8
+13:25:40,187 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+13:25:40,189 TRACE StringType:153 - binding 'test descr' to parameter: 2
+13:25:40,189 TRACE StringType:153 - binding 'taky name' to parameter: 3
+13:25:40,189 TRACE IntegerType:153 - binding '1007' to parameter: 4
+13:25:40,190 TRACE IntegerType:153 - binding '7' to parameter: 5
+13:25:40,190 TRACE IntegerType:153 - binding '2' to parameter: 6
+13:25:40,190 TRACE TimestampType:153 - binding '2013-04-16 13:25:39' to parameter: 7
+13:25:40,201 TRACE StringType:153 - binding 'uuid lol' to parameter: 8
+13:32:03,578 TRACE IntegerType:153 - binding '25' to parameter: 1
+13:32:03,605 TRACE TrueFalseType:195 - returning 'false' as column: DELETED10_0_
+13:32:03,605 TRACE StringType:195 - returning 'test descr' as column: DESCRIPT3_10_0_
+13:32:03,606 TRACE StringType:195 - returning 'taky name' as column: NAME10_0_
+13:32:03,606 TRACE IntegerType:195 - returning '1007' as column: ORGN5_10_0_
+13:32:03,606 TRACE IntegerType:195 - returning '7' as column: PARENT6_10_0_
+13:32:03,606 TRACE IntegerType:195 - returning '2' as column: POSITION10_0_
+13:32:03,612 TRACE TimestampType:195 - returning '2013-04-16 13:14:40' as column: UPDATED8_10_0_
+13:32:03,613 TRACE StringType:195 - returning 'uuid lol' as column: UUID10_0_
+13:32:03,653 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+13:32:03,654 TRACE StringType:153 - binding 'test descr CHANGED' to parameter: 2
+13:32:03,654 TRACE StringType:153 - binding 'taky name CHANGED' to parameter: 3
+13:32:03,654 TRACE IntegerType:153 - binding '1007' to parameter: 4
+13:32:03,654 TRACE IntegerType:153 - binding '7' to parameter: 5
+13:32:03,654 TRACE IntegerType:153 - binding '2' to parameter: 6
+13:32:03,655 TRACE TimestampType:153 - binding '2013-04-16 13:32:03' to parameter: 7
+13:32:03,657 TRACE StringType:153 - binding 'uuid lol' to parameter: 8
+13:34:56,125 TRACE IntegerType:153 - binding '25' to parameter: 1
+13:34:56,150 TRACE TrueFalseType:195 - returning 'false' as column: DELETED10_0_
+13:34:56,150 TRACE StringType:195 - returning 'test descr' as column: DESCRIPT3_10_0_
+13:34:56,150 TRACE StringType:195 - returning 'taky name' as column: NAME10_0_
+13:34:56,151 TRACE IntegerType:195 - returning '1007' as column: ORGN5_10_0_
+13:34:56,151 TRACE IntegerType:195 - returning '7' as column: PARENT6_10_0_
+13:34:56,151 TRACE IntegerType:195 - returning '2' as column: POSITION10_0_
+13:34:56,158 TRACE TimestampType:195 - returning '2013-04-16 13:14:40' as column: UPDATED8_10_0_
+13:34:56,159 TRACE StringType:195 - returning 'uuid lol' as column: UUID10_0_
+13:34:56,205 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+13:34:56,205 TRACE StringType:153 - binding 'test descr CHANGED' to parameter: 2
+13:34:56,205 TRACE StringType:153 - binding 'taky name CHANGED' to parameter: 3
+13:34:56,206 TRACE IntegerType:153 - binding '1007' to parameter: 4
+13:34:56,206 TRACE IntegerType:153 - binding '7' to parameter: 5
+13:34:56,206 TRACE IntegerType:153 - binding '2' to parameter: 6
+13:34:56,207 TRACE TimestampType:153 - binding '2013-04-16 13:34:55' to parameter: 7
+13:34:56,209 TRACE StringType:153 - binding 'uuid lol' to parameter: 8
+13:34:56,209 TRACE IntegerType:153 - binding '25' to parameter: 9
+13:37:14,419 TRACE IntegerType:153 - binding '80' to parameter: 1
+13:37:14,522 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+13:37:14,522 TRACE StringType:153 - binding 'test descr CHANGED' to parameter: 2
+13:37:14,522 TRACE StringType:153 - binding 'taky name CHANGED' to parameter: 3
+13:37:14,522 TRACE IntegerType:153 - binding '1007' to parameter: 4
+13:37:14,523 TRACE IntegerType:153 - binding '7' to parameter: 5
+13:37:14,523 TRACE IntegerType:153 - binding '2' to parameter: 6
+13:37:14,523 TRACE TimestampType:153 - binding '2013-04-16 13:37:13' to parameter: 7
+13:37:14,533 TRACE StringType:153 - binding 'uuid lol' to parameter: 8
+13:37:14,533 TRACE IntegerType:153 - binding '80' to parameter: 9
+13:37:14,537 ERROR AbstractBatcher:73 - Exception executing batch: 
+org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85)
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70)
+	at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:262)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:179)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at service.Service.saveOrUpdate(Service.java:24)
+	at service.Client.main(Client.java:93)
+13:37:14,540 ERROR AbstractFlushingEventListener:324 - Could not synchronize database state with session
+org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:85)
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:70)
+	at org.hibernate.jdbc.BatchingBatcher.checkRowCounts(BatchingBatcher.java:90)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:262)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:179)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:51)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1206)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:375)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at service.Service.saveOrUpdate(Service.java:24)
+	at service.Client.main(Client.java:93)
+13:44:56,632 TRACE IntegerType:153 - binding '80' to parameter: 1
+13:44:56,655 TRACE IntegerType:153 - binding '80' to parameter: 1
+13:44:56,707 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+13:44:56,707 TRACE StringType:153 - binding 'test descr CHANGED' to parameter: 2
+13:44:56,707 TRACE StringType:153 - binding 'taky name CHANGED' to parameter: 3
+13:44:56,708 TRACE IntegerType:153 - binding '1007' to parameter: 4
+13:44:56,708 TRACE IntegerType:153 - binding '7' to parameter: 5
+13:44:56,708 TRACE IntegerType:153 - binding '2' to parameter: 6
+13:44:56,709 TRACE TimestampType:153 - binding '2013-04-16 13:44:56' to parameter: 7
+13:44:56,718 TRACE StringType:153 - binding 'uuid lol' to parameter: 8
+13:45:37,736 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+13:45:37,739 TRACE StringType:153 - binding 'test descr CHANGED' to parameter: 2
+13:45:37,739 TRACE StringType:153 - binding 'taky name CHANGED' to parameter: 3
+13:45:37,739 TRACE IntegerType:153 - binding '1007' to parameter: 4
+13:45:37,739 TRACE IntegerType:153 - binding '7' to parameter: 5
+13:45:37,739 TRACE IntegerType:153 - binding '2' to parameter: 6
+13:45:37,740 TRACE TimestampType:153 - binding '2013-04-16 13:45:37' to parameter: 7
+13:45:37,748 TRACE StringType:153 - binding 'uuid lol' to parameter: 8
+13:46:33,616 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+13:46:33,619 TRACE StringType:153 - binding 'test descr CHANGED' to parameter: 2
+13:46:33,619 TRACE StringType:153 - binding 'taky name CHANGED' to parameter: 3
+13:46:33,620 TRACE IntegerType:153 - binding '1007' to parameter: 4
+13:46:33,620 TRACE IntegerType:153 - binding '7' to parameter: 5
+13:46:33,620 TRACE IntegerType:153 - binding '2' to parameter: 6
+13:46:33,620 TRACE TimestampType:153 - binding '2013-04-16 13:46:33' to parameter: 7
+13:46:33,629 TRACE StringType:153 - binding 'uuid lol' to parameter: 8
+16:21:31,686 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+16:21:31,704 TRACE StringType:153 - binding 'test descr CHANGED' to parameter: 2
+16:21:31,705 TRACE StringType:153 - binding 'taky name CHANGED' to parameter: 3
+16:21:31,705 TRACE IntegerType:153 - binding '1007' to parameter: 4
+16:21:31,705 TRACE IntegerType:153 - binding '7' to parameter: 5
+16:21:31,705 TRACE IntegerType:153 - binding '2' to parameter: 6
+16:21:31,706 TRACE TimestampType:153 - binding '2013-04-16 16:21:31' to parameter: 7
+16:21:31,715 TRACE StringType:153 - binding 'uuid lol' to parameter: 8

@@ -4,7 +4,6 @@ package service;
 
 
 import java.sql.Timestamp;
-import java.text.Format;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -13,15 +12,10 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.AnnotationConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import assembler.CategoryAssembler;
-
-import dao.CategoryDaoImpl;
 import dto.CategoryDto;
-
 import entity.Category;
 import entity.CategoryGroup;
 
@@ -38,6 +32,7 @@ public class Client {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy.mm.dd");
 		Timestamp date = new Timestamp(new Date().getTime());
 		List<Category> categoriesList = new ArrayList<Category>();
+		List<CategoryGroup> groupList = new ArrayList<CategoryGroup>();
 		
 		SessionFactory sessionFactory; 
 		//sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
@@ -58,8 +53,9 @@ public class Client {
 		
 		new Category("meno", "popis", 25);
 		
-		category.setName("categoryName");
-		category.setDescription("category description");
+		category.setCategoryId(50);
+		category.setName("NEWcategoryNameCHANGED");
+		category.setDescription("NEWcategory descriptionCHANGED");
 		category.setDeleted(true);
 		category.setOrganisationId(5);
 		category.setParentCategory(7);
@@ -88,17 +84,34 @@ public class Client {
 		group.setOrganizatonId(5);
 		group.setUpdatedDate(new Date());
 		
-		session.beginTransaction();
 		
-		session.save(new CategoryAssembler().assembleToEntity(category));
-		//session.save(category);
-		session.save(cat2);
-		session.save(group);
+		//new Service().saveOrUpdate(category);
 		
-				
-		session.getTransaction().commit();
+		CategoryDto catDto = new CategoryDto(); 
+		catDto.setCategoryDto("taky name CHANGED", "test descr CHANGED", 007, 2, new Date(), false, 1007, "uuid lol");
+		//catDto.setCategoryId(80);
+		groupList.add(group);
+		catDto.setGroups(groupList);
 		
-		session.close();
+		new Service().saveOrUpdate(catDto);
+		//System.out.println("vysledok query"+new Service().findCategory(23).toString());
+		
+		//new Service().delete(new Service().findCategory(23));
+		
+		//System.out.println("vzsledok query"+new Service().findCategory(23).toString());
+//		session.beginTransaction();
+//		
+//		session.save(new CategoryAssembler().assembleToEntity(category));
+//		//session.save(category);
+//		session.save(cat2);
+//		session.save(group);
+//		
+//				
+//		session.getTransaction().commit();
+//		
+//		session.close();
+		
+		
 		
 	}
 
