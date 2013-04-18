@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import dao.CategoryGroupDaoImpl;
+import dto.CategoryDto;
 import dto.CategoryGroupDto;
 import entity.CategoryGroup;
 
@@ -60,7 +61,8 @@ public class CategoryGroupAssembler {
 		resultDto.setName(categoryGroup.getName());
 		resultDto.setOrganizatonId(categoryGroup.getOrganizatonId());
 		resultDto.setUpdatedDate(categoryGroup.getUpdatedDate());
-		resultDto.setCategories(categoryGroup.getCategories());
+		//volat assembler kolekcii resultDto.setCategories(categoryGroup.getCategories());
+		resultDto.setCategories(new CategoryAssembler().assembleToDtos(categoryGroup.getCategories()));
 
 		return resultDto;
 	}
@@ -87,7 +89,8 @@ public class CategoryGroupAssembler {
 		resultEntity.setName(categoryGroupDTO.getName());
 		resultEntity.setOrganizatonId(categoryGroupDTO.getOrganizatonId());
 		resultEntity.setUpdatedDate(categoryGroupDTO.getUpdatedDate());
-		resultEntity.setCategories(categoryGroupDTO.getCategories());
+		resultEntity.setCategories(new CategoryAssembler().assembleToEntities(categoryGroupDTO.getCategories()
+				));
 
 		return resultEntity;
 	}

@@ -15,7 +15,9 @@ import org.hibernate.SessionFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import dao.CategoryDaoImpl;
 import dto.CategoryDto;
+import dto.CategoryGroupDto;
 import entity.Category;
 import entity.CategoryGroup;
 
@@ -31,8 +33,8 @@ public class Client {
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy.mm.dd");
 		Timestamp date = new Timestamp(new Date().getTime());
-		List<Category> categoriesList = new ArrayList<Category>();
-		List<CategoryGroup> groupList = new ArrayList<CategoryGroup>();
+		List<CategoryDto> categoriesList = new ArrayList<CategoryDto>();
+		List<CategoryGroupDto> groupList = new ArrayList<CategoryGroupDto>();
 		
 		SessionFactory sessionFactory; 
 		//sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
@@ -40,12 +42,15 @@ public class Client {
 		//Session session = sessionFactory.openSession();
 		//Session session = new AnnotationConfiguration().configure().buildSessionFactory().openSession();
 		
-	
+		
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
 		
-		sessionFactory = (SessionFactory) context.getBean("categorySessionFactory");		
+		sessionFactory = (SessionFactory) context.getBean("sessionFactory");		
 		Session session = sessionFactory.openSession();//getCurrentSession();
+		
+		//Service service = (Service) context.getBean("service");
+		
 		
 		CategoryDto category = new CategoryDto();//(Category)context.getBean("category");
 		CategoryDto cat2= new CategoryDto();
@@ -65,20 +70,9 @@ public class Client {
 		
 		
 		
-		//categoriesList.add(category);
-		
-//		category.setName("secondcategoryName");
-//		category.setDescription("secondcategory description");		
-//		category.setUpdateDate(new Date());		
-//		category.setPosition(10);
-		//new Category(name, description, parentCategory, position, updateDate, deleted, organisationId, uuid)
-		//categoriesList.add(new Category("secondcategoryName", "secondcategory description", null, 11, new Date(), null, null, "nejake ine uid"));
-		
-		
-		//categoriesList.add(cat2);
 		
 		group.setName("groupName");	
-		group.setCategories(categoriesList);
+		//group.setCategories(categoriesList);
 		group.setDescription("group description");
 		group.setDeleted(false);		
 		group.setOrganizatonId(5);
@@ -90,26 +84,13 @@ public class Client {
 		CategoryDto catDto = new CategoryDto(); 
 		catDto.setCategoryDto("taky name CHANGED", "test descr CHANGED", 007, 2, new Date(), false, 1007, "uuid lol");
 		//catDto.setCategoryId(80);
-		groupList.add(group);
+	//	groupList.add(group);
 		catDto.setGroups(groupList);
 		
-		new Service().saveOrUpdate(catDto);
-		//System.out.println("vysledok query"+new Service().findCategory(23).toString());
+		//service.saveOrUpdate(category);
 		
-		//new Service().delete(new Service().findCategory(23));
 		
-		//System.out.println("vzsledok query"+new Service().findCategory(23).toString());
-//		session.beginTransaction();
-//		
-//		session.save(new CategoryAssembler().assembleToEntity(category));
-//		//session.save(category);
-//		session.save(cat2);
-//		session.save(group);
-//		
-//				
-//		session.getTransaction().commit();
-//		
-//		session.close();
+		
 		
 		
 		

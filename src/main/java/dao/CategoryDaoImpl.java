@@ -2,19 +2,19 @@ package dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import entity.Category;
 
 public class CategoryDaoImpl implements CategoryDao {
 
-	ApplicationContext context = new ClassPathXmlApplicationContext(
-			"application-context.xml");
-
-	SessionFactory sessionFactory = (SessionFactory) context
-			.getBean("categorySessionFactory");
-	private Session session = sessionFactory.openSession();
+	
+	private SessionFactory sessionFactory ;
+	private Session session;
+	
+	public CategoryDaoImpl(){
+		this.session = sessionFactory.openSession();//getCurrentSession();
+	}
 
 	@Override
 	public Category find(Integer id) {
@@ -53,5 +53,20 @@ public class CategoryDaoImpl implements CategoryDao {
 	public Session getSession() {
 		return session;
 	}
+
+	public void setSession(Session session) {
+		this.session = session;
+	}
+
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+
+	@Autowired
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+	
+	
 
 }

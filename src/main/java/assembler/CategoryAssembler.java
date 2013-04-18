@@ -60,6 +60,7 @@ public class CategoryAssembler {
 		resultDto.setPosition(category.getPosition());
 		resultDto.setUpdateDate(category.getUpdateDate());
 		resultDto.setUuid(category.getUuid());
+		resultDto.setGroups( new CategoryGroupAssembler().assembleToDtos(category.getGroups()));
 		return resultDto;
 	}
 

@@ -14,7 +14,7 @@ public class CategoryGroupDto {
 	private Date updatedDate;
 	private boolean deleted;	
 	private Integer organizatonId;
-	private List<Category> categories;
+	private List<CategoryDto> categories;
 	
 	
 	public Integer getCategoryGroupId() {
@@ -53,10 +53,10 @@ public class CategoryGroupDto {
 	public void setOrganizatonId(Integer organizatonId) {
 		this.organizatonId = organizatonId;
 	}
-	public List<Category> getCategories() {
+	public List<CategoryDto> getCategories() {
 		return categories;
 	}
-	public void setCategories(List<Category> categories) {
+	public void setCategories(List<CategoryDto> categories) {
 		this.categories = categories;
 	}
 	@Override

@@ -17,7 +17,7 @@ public class CategoryDto {
 	private boolean deleted; 	
 	private Integer organisationId;	
 	private String uuid;
-	private List<CategoryGroup> groups;
+	private List<CategoryGroupDto> groups;
 	
 	public CategoryDto(){
 		
@@ -99,11 +99,11 @@ public class CategoryDto {
 				+ organisationId + ", uuid=" + uuid + "]";
 	}
 
-	public List<CategoryGroup> getGroups() {
+	public List<CategoryGroupDto> getGroups() {
 		return groups;
 	}
 
-	public void setGroups(List<CategoryGroup> groups) {
+	public void setGroups(List<CategoryGroupDto> groups) {
 		this.groups = groups;
 	}
 
