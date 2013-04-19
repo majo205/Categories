@@ -2,32 +2,37 @@
 
 
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:util="http://www.springframework.org/schema/util" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"	
+	xmlns:util="http://www.springframework.org/schema/util" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
 http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
 
-	
-	
+
+
 	<bean id="service" class="service.Service">
-<!-- 		<property name="categoryDao" ref="categoryDao"/> -->
-<!-- 		<property name="groupDao" ref="groupDao"/> -->
-<!-- 		<property name="categoryAssembler" ref="categoryAssembler"/> -->
-<!-- 		<property name="groupAssembler" ref="groupAssembler"/>		 -->
+		<property name="categoryDao" ref="categoryDao" />
+		<property name="groupDao" ref="groupDao" />
+		<property name="categoryAssembler" ref="categoryAssembler" />
+		<property name="groupAssembler" ref="groupAssembler" />
 	</bean>
-	
-	<bean id="categoryAssembler" class="assembler.CategoryAssembler" />
+
+	<bean id="categoryAssembler" class="assembler.CategoryAssembler"
+		autowire="byName" />
 	<bean id="groupAssembler" class="assembler.CategoryGroupAssembler" />
 
-	<bean id="categoryDao" class="dao.CategoryDaoImpl" >
-<!-- 		<property name="sessionFactory" ref="sessionFactory"/> -->
+	<bean id="categoryDao" class="dao.CategoryDaoImpl">
+		<!-- <property name="sessionFactory" ref="sessionFactory" /> -->
+		<!-- <property name="session" ref="session" /> -->
 	</bean>
 
-	<bean id="groupDao" class="dao.CategoryGroupDaoImpl" >
-<!--  		<property name="sessionFactory" ref="sessionFactory"/>  -->
+	<bean id="groupDao" class="dao.CategoryGroupDaoImpl" autowire="byName">
+		<!-- <property name="sessionFactory" ref="sessionFactory" /> -->
+		<!-- <property name="session" ref="session" /> -->
 	</bean>
 
 
-	
+
 
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
@@ -58,5 +63,16 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 
 	</bean>
 
+	<bean id="session" class="org.springframework.orm.hibernate3.SessionFactoryUtils"
+		factory-method="getSession" scope="prototype">
+		<constructor-arg ref="sessionFactory" />
+		<constructor-arg value="false" />
+		<!-- This is seems to be needed to get rid of the 'No Hibernate Session' 
+			error' -->
+		<!-- <aop:scoped-proxy /> -->
+
+	</bean>
+
+	
 
 </beans>

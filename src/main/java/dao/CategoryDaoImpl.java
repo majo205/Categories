@@ -3,6 +3,7 @@ package dao;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import entity.Category;
 
@@ -13,39 +14,25 @@ public class CategoryDaoImpl implements CategoryDao {
 	private Session session;
 	
 	public CategoryDaoImpl(){
-		this.session = sessionFactory.openSession();//getCurrentSession();
+		
 	}
 
 	@Override
+	@Transactional
 	public Category find(Integer id) {
 		return (Category) this.session.get(Category.class, id);
 	}
 
 	@Override
+	@Transactional
 	public void saveOrUpdate(Category category) {
 
-		try {
-			Integer catID = category.getCategoryId();
-
-			
-			if (catID != null) {
-				if (this.find(catID) != null) {
-					this.session.saveOrUpdate(category);
-				} else {
-					this.session.save(category);
-					System.err
-							.println("Unable to insert specific value to categoryId! New one was generated!");
-				}
-			}
-
-		} catch (NullPointerException e) {
-			System.err.println("Null pointer in categoryId! Category inserted with generated Id!");
-			this.session.save(category);
-		}
-
+		this.session.saveOrUpdate(category);
+		
 	}
 
 	@Override
+	@Transactional
 	public void delete(Category category) {
 		this.session.delete(category);
 	}
@@ -58,6 +45,7 @@ public class CategoryDaoImpl implements CategoryDao {
 		this.session = session;
 	}
 
+	@Autowired
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
