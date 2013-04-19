@@ -1,6 +1,7 @@
 package service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import assembler.CategoryAssembler;
 import assembler.CategoryGroupAssembler;
@@ -18,6 +19,8 @@ public class Service {
 	private CategoryAssembler categoryAssembler;
 	private CategoryGroupAssembler groupAssembler;
 
+	
+	
 	public void saveOrUpdate(Object object) {
 
 		if (object instanceof CategoryDto) {
@@ -47,6 +50,7 @@ public class Service {
 
 	}
 
+	
 	public void delete(Object object) {
 
 		if (object instanceof CategoryDto) {
@@ -77,13 +81,13 @@ public class Service {
 	}
 
 
-
+	@Transactional
 	public CategoryDto findCategory(Integer id) {
 
 		CategoryDto resultDto = new CategoryDto();
 		
 		categoryDao.getSession().beginTransaction();
-
+		
 		resultDto = categoryAssembler.assembleToDto(categoryDao.find(id));
 
 		categoryDao.getSession().getTransaction().commit();
@@ -91,6 +95,8 @@ public class Service {
 		return resultDto;
 	}
 
+	
+	
 	public CategoryGroupDto findGroup(Integer id) {
 		CategoryGroupDto resultDto = new CategoryGroupDto();
 		

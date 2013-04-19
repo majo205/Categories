@@ -47,9 +47,10 @@ public class Client {
 		ApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
 		
 		sessionFactory = (SessionFactory) context.getBean("sessionFactory");		
-		Session session = sessionFactory.openSession();//getCurrentSession();
+		Session session = (Session) context.getBean("session");//getCurrentSession();
+		//session.
 		
-		//Service service = (Service) context.getBean("service");
+		Service service = (Service) context.getBean("service");
 		
 		
 		CategoryDto category = new CategoryDto();//(Category)context.getBean("category");
@@ -58,7 +59,7 @@ public class Client {
 		
 		new Category("meno", "popis", 25);
 		
-		category.setCategoryId(50);
+		//category.setCategoryId(50);
 		category.setName("NEWcategoryNameCHANGED");
 		category.setDescription("NEWcategory descriptionCHANGED");
 		category.setDeleted(true);
@@ -89,7 +90,7 @@ public class Client {
 		
 		//service.saveOrUpdate(category);
 		
-		
+		System.out.println(service.findCategory(10));
 		
 		
 		
