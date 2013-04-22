@@ -4,14 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 import dao.CategoryDaoImpl;
+import dao.CategoryGroupDaoImpl;
 import dto.CategoryDto;
 import entity.Category;
+import entity.CategoryGroup;
 
 public class CategoryAssembler {
+	
+	private CategoryDaoImpl categoryDao;
+	//private CategoryGroupDaoImpl groupDao;
+	//private CategoryAssembler categoryAssembler;
+	private CategoryGroupAssembler groupAssembler;
 
 	public CategoryDto assembleToDto(Category category) {
-		System.out.println(category.toString());
-
 		return setDto(category);
 
 	}
@@ -48,6 +53,8 @@ public class CategoryAssembler {
 	}
 
 	private CategoryDto setDto(Category category) {
+		
+		System.out.println("Assembling category to dto..");
 
 		CategoryDto resultDto = new CategoryDto();
 
@@ -60,31 +67,36 @@ public class CategoryAssembler {
 		resultDto.setPosition(category.getPosition());
 		resultDto.setUpdateDate(category.getUpdateDate());
 		resultDto.setUuid(category.getUuid());
-		resultDto.setGroups( new CategoryGroupAssembler().assembleToDtos(category.getGroups()));
+		resultDto.setGroups( groupAssembler.assembleToDtos(category.getGroups()));
 		return resultDto;
 	}
 
 	private Category setEntity(CategoryDto categoryDto) {
+		
+		System.out.println("Assembling category to entity..");
 
 		Category resultEntity = new Category();
-
-		CategoryDaoImpl categoryDao = new CategoryDaoImpl();
-
-		try {
-			if (categoryDto.getCategoryId() == null) {
-				
-			} else if (categoryDao.find(categoryDto.getCategoryId()) != null) {
-
-				resultEntity = categoryDao.find(categoryDto.getCategoryId());
-
-			} else {
-				resultEntity = new Category();
-				resultEntity.setCategoryId(categoryDto.getCategoryId());
-			}
-
-		} catch (NullPointerException e) {
-
-		}
+		List<CategoryGroup> groupsList = new ArrayList<CategoryGroup>();
+//
+//		 if (categoryDao.find(categoryDto.getCategoryId()) != null) {
+//
+//				resultEntity = categoryDao.find(categoryDto.getCategoryId());
+//
+//			} 
+//		 else {
+//				resultEntity = new Category();
+//			//	resultEntity.setCategoryId(categoryDto.getCategoryId());
+//			}
+		
+		try{
+			resultEntity = categoryDao.find(categoryDto.getCategoryId());
+			groupsList = groupAssembler.assembleToEntities(categoryDto.getGroups());
+			
+		}catch (NullPointerException e){
+			System.err.println("Category with selected id does not exist");
+			resultEntity = new Category();
+			
+		}finally{		
 		resultEntity.setDeleted(categoryDto.isDeleted());
 		resultEntity.setDescription(categoryDto.getDescription());
 		resultEntity.setName(categoryDto.getName());
@@ -93,18 +105,8 @@ public class CategoryAssembler {
 		resultEntity.setPosition(categoryDto.getPosition());
 		resultEntity.setUpdateDate(categoryDto.getUpdateDate());
 		resultEntity.setUuid(categoryDto.getUuid());
-
-		// resultEntity.setCommonCategoryId(categoryDto.getCommonCategoryId());
-		// //najst cey dao a updatnut fieldz
-		// resultEntity.setDeleted(categoryDto.isDeleted());
-		// resultEntity.setDescription(categoryDto.getDescription());
-		// resultEntity.setName(categoryDto.getName());
-		// resultEntity.setOrganisationId(categoryDto.getOrganisationId());
-		// resultEntity.setParentCategory(categoryDto.getParentCategory());
-		// resultEntity.setPosition(categoryDto.getPosition());
-		// resultEntity.setUpdateDate(categoryDto.getUpdateDate());
-		// resultEntity.setUuid(categoryDto.getUuid());
-
+		resultEntity.setGroups(groupsList);
+		}
 		return resultEntity;
 	}
 

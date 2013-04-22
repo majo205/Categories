@@ -33,8 +33,8 @@ public class Client {
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy.mm.dd");
 		Timestamp date = new Timestamp(new Date().getTime());
-		List<CategoryDto> categoriesList = new ArrayList<CategoryDto>();
-		List<CategoryGroupDto> groupList = new ArrayList<CategoryGroupDto>();
+		List<CategoryDto> categoryDtosList = new ArrayList<CategoryDto>();
+		List<CategoryGroupDto> groupDtosList = new ArrayList<CategoryGroupDto>();
 		
 		SessionFactory sessionFactory; 
 		//sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
@@ -53,45 +53,51 @@ public class Client {
 		Service service = (Service) context.getBean("service");
 		
 		
-		CategoryDto category = new CategoryDto();//(Category)context.getBean("category");
-		CategoryDto cat2= new CategoryDto();
-		CategoryGroup group = new CategoryGroup();//(CategoryGroup)context.getBean("group");
-		
-		new Category("meno", "popis", 25);
-		
-		//category.setCategoryId(50);
-		category.setName("NEWcategoryNameCHANGED");
-		category.setDescription("NEWcategory descriptionCHANGED");
-		category.setDeleted(true);
-		category.setOrganisationId(5);
-		category.setParentCategory(7);
-		category.setUpdateDate(new Date());
-		category.setUuid("nejake uuid");		
-		category.setPosition(10);
+		CategoryDto categoryDto	= new CategoryDto();
+		CategoryDto cat2Dto= new CategoryDto();
+		CategoryGroupDto groupDto = new CategoryGroupDto();		
 		
 		
 		
-		
-		group.setName("groupName");	
-		//group.setCategories(categoriesList);
-		group.setDescription("group description");
-		group.setDeleted(false);		
-		group.setOrganizatonId(5);
-		group.setUpdatedDate(new Date());
+		groupDto.setName("groupName");		
+		groupDto.setDescription("group description");
+		groupDto.setDeleted(false);		
+		groupDto.setOrganizatonId(5);
+		groupDto.setUpdatedDate(new Date());
 		
 		
-		//new Service().saveOrUpdate(category);
+		categoryDto.setName("categoryName");
+		categoryDto.setDescription("category description");
+		categoryDto.setDeleted(true);
+		categoryDto.setOrganisationId(5);
+		categoryDto.setParentCategory(7);
+		categoryDto.setUpdateDate(new Date());
+		categoryDto.setUuid("nejake uuid");		
+		categoryDto.setPosition(10);
 		
+		groupDtosList.add(groupDto);
+		categoryDtosList.add(categoryDto);
+		
+		categoryDto.setGroups(groupDtosList);		
+		groupDto.setCategories(categoryDtosList);
+		
+		
+		
+					
 		CategoryDto catDto = new CategoryDto(); 
 		catDto.setCategoryDto("taky name CHANGED", "test descr CHANGED", 007, 2, new Date(), false, 1007, "uuid lol");
-		//catDto.setCategoryId(80);
-	//	groupList.add(group);
-		catDto.setGroups(groupList);
+		catDto.setGroups(groupDtosList);
+		
+		service.saveOrUpdate(groupDto);
+		service.saveOrUpdate(categoryDto);
+		service.saveOrUpdate(catDto);
 		
 		//service.saveOrUpdate(category);
 		
-		System.out.println(service.findCategory(10));
-		
+//		service.saveOrUpdate(categoryDto);
+//		
+//		System.out.println("dto "+service.findCategory(9).toString());
+//		
 		
 		
 		

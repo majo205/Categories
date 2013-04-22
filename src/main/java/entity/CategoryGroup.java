@@ -13,6 +13,8 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 import org.hibernate.annotations.Type;
 
 @Entity
@@ -22,6 +24,7 @@ public class CategoryGroup {
 	@Id
 	@Column (name="COMMN_CATG_GROUP_ID", nullable=false, length=38)
 	@GeneratedValue (strategy=GenerationType.IDENTITY)
+	//@NotFound (action=NotFoundAction.IGNORE)
 	private Integer categoryGroupId;
 	
 	@Column (name="NAME", nullable=true, length=150)
@@ -46,6 +49,7 @@ public class CategoryGroup {
 	    joinColumns = @JoinColumn(name = "COMMON_CATG_GROUP_ID"), 
 	    inverseJoinColumns = @JoinColumn(name = "COMMON_CATEGORY_ID")
 			)
+	//@NotFound (action=NotFoundAction.IGNORE)
 	private List<Category> categories;
 	
 	

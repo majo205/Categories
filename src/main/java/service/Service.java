@@ -32,7 +32,7 @@ public class Service {
 			categoryDao.saveOrUpdate(category);
 
 			categoryDao.getSession().getTransaction().commit();
-			categoryDao.getSession().close();
+			//categoryDao.getSession().close();
 		}
 
 		if (object instanceof CategoryGroupDto) {
@@ -44,7 +44,7 @@ public class Service {
 			groupDao.saveOrUpdate(categorygroup);
 
 			groupDao.getSession().getTransaction().commit();
-			groupDao.getSession().close();
+			//groupDao.getSession().close();
 
 		}
 
@@ -62,7 +62,7 @@ public class Service {
 			categoryDao.delete(category);
 
 			categoryDao.getSession().getTransaction().commit();
-			categoryDao.getSession().close();
+			//categoryDao.getSession().close();
 
 		}
 
@@ -75,7 +75,7 @@ public class Service {
 			groupDao.delete(categorygroup);
 
 			groupDao.getSession().getTransaction().commit();
-			groupDao.getSession().close();
+			//groupDao.getSession().close();
 		}
 
 	}

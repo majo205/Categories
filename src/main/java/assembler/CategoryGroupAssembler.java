@@ -3,15 +3,21 @@ package assembler;
 import java.util.ArrayList;
 import java.util.List;
 
+import dao.CategoryDaoImpl;
 import dao.CategoryGroupDaoImpl;
-import dto.CategoryDto;
 import dto.CategoryGroupDto;
+import entity.Category;
 import entity.CategoryGroup;
 
 public class CategoryGroupAssembler {
+	
+	//private CategoryDaoImpl categoryDao;
+	private CategoryGroupDaoImpl groupDao;
+	private CategoryAssembler categoryAssembler;
+	//private CategoryGroupAssembler groupAssembler;
+	
 
 	public CategoryGroupDto assembleToDto(CategoryGroup categoryGroup) {
-
 		return setDto(categoryGroup);
 
 	}
@@ -31,9 +37,6 @@ public class CategoryGroupAssembler {
 	}
 
 	public CategoryGroup assembleToEntity(CategoryGroupDto categoryGroupDTO) {
-
-		CategoryGroup resultEntity = new CategoryGroup();
-
 		return setEntity(categoryGroupDTO);
 
 	}
@@ -53,6 +56,8 @@ public class CategoryGroupAssembler {
 
 	private CategoryGroupDto setDto(CategoryGroup categoryGroup) {
 
+		System.out.println("Assembling group to dto..");
+		
 		CategoryGroupDto resultDto = new CategoryGroupDto();
 
 		resultDto.setCategoryGroupId(categoryGroup.getCategoryGroupId());
@@ -62,37 +67,50 @@ public class CategoryGroupAssembler {
 		resultDto.setOrganizatonId(categoryGroup.getOrganizatonId());
 		resultDto.setUpdatedDate(categoryGroup.getUpdatedDate());
 		//volat assembler kolekcii resultDto.setCategories(categoryGroup.getCategories());
-		resultDto.setCategories(new CategoryAssembler().assembleToDtos(categoryGroup.getCategories()));
+		resultDto.setCategories(categoryAssembler.assembleToDtos(categoryGroup.getCategories()));
 
 		return resultDto;
 	}
 
 	private CategoryGroup setEntity(CategoryGroupDto categoryGroupDTO) {
+		
+		System.out.println("Assembling group to entity..");
 
-		CategoryGroup resultEntity;
-		CategoryGroupDaoImpl groupDao = new CategoryGroupDaoImpl();
+		CategoryGroup resultEntity = new CategoryGroup();
+		List<Category> categoriesList = new ArrayList<Category>();
+		
+//		if ((groupDao.find(categoryGroupDTO
+//		.getCategoryGroupId())) != null) {
+//
+//	resultEntity = groupDao.find(categoryGroupDTO
+//			.getCategoryGroupId());
+//} else {
+//	resultEntity = new CategoryGroup();
+////	resultEntity.setCategoryGroupId(categoryGroupDTO
+////			.getCategoryGroupId());
+//}
 
-		if ((groupDao.find(categoryGroupDTO
-				.getCategoryGroupId())) != null) {
 
-			resultEntity = groupDao.find(categoryGroupDTO
-					.getCategoryGroupId());
-		} else {
+		try{
+			
+			resultEntity = groupDao.find(categoryGroupDTO.getCategoryGroupId());
+			categoriesList = categoryAssembler.assembleToEntities(categoryGroupDTO.getCategories());
+			
+		}catch (NullPointerException e){
+			System.err.println("Group with selected id does not exist");
 			resultEntity = new CategoryGroup();
-			resultEntity.setCategoryGroupId(categoryGroupDTO
-					.getCategoryGroupId());
-		}
-
-		resultEntity.setCategoryGroupId(categoryGroupDTO.getCategoryGroupId());
+			
+		}finally{
+			
 		resultEntity.setDeleted(categoryGroupDTO.isDeleted());
 		resultEntity.setDescription(categoryGroupDTO.getDescription());
 		resultEntity.setName(categoryGroupDTO.getName());
 		resultEntity.setOrganizatonId(categoryGroupDTO.getOrganizatonId());
 		resultEntity.setUpdatedDate(categoryGroupDTO.getUpdatedDate());
-		resultEntity.setCategories(new CategoryAssembler().assembleToEntities(categoryGroupDTO.getCategories()
-				));
-
+		resultEntity.setCategories(categoriesList);
+		}
 		return resultEntity;
+		
 	}
 
 }

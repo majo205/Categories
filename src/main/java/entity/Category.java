@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 import org.hibernate.annotations.Type;
 import org.hibernate.type.TrueFalseType;
 import org.springframework.beans.factory.annotation.Required;
@@ -15,6 +17,7 @@ public class Category {
 	@Id
 	@Column(name = "COMMON_CATEGORY_ID", nullable = false, unique = true, length = 38)
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	//@NotFound (action=NotFoundAction.IGNORE)
 	private Integer categoryId;
 
 	@Column(name = "NAME", nullable = true, length = 150)
@@ -46,6 +49,7 @@ public class Category {
 //	private CategoryGroup categoryGroup;
 	
 	@ManyToMany(mappedBy="categories")
+	//@NotFound (action=NotFoundAction.IGNORE)
 	private List<CategoryGroup> groups;
 
 	public Category(){
