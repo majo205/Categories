@@ -966,3 +966,45 @@ org.hibernate.StaleStateException: Batch update returned unexpected row count fr
 16:21:31,705 TRACE IntegerType:153 - binding '2' to parameter: 6
 16:21:31,706 TRACE TimestampType:153 - binding '2013-04-16 16:21:31' to parameter: 7
 16:21:31,715 TRACE StringType:153 - binding 'uuid lol' to parameter: 8
+15:13:42,713 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:13:42,720 TRACE StringType:153 - binding 'group description' to parameter: 2
+15:13:42,720 TRACE StringType:153 - binding 'groupName' to parameter: 3
+15:13:42,720 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:13:42,721 TRACE TimestampType:153 - binding '2013-04-22 15:13:42' to parameter: 5
+15:13:42,815 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+15:13:42,816 TRACE StringType:153 - binding 'category description' to parameter: 2
+15:13:42,816 TRACE StringType:153 - binding 'categoryName' to parameter: 3
+15:13:42,816 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:13:42,816 TRACE IntegerType:153 - binding '7' to parameter: 5
+15:13:42,816 TRACE IntegerType:153 - binding '10' to parameter: 6
+15:13:42,816 TRACE TimestampType:153 - binding '2013-04-22 15:13:42' to parameter: 7
+15:13:42,817 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+15:13:42,846 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:13:42,846 TRACE StringType:153 - binding 'test descr CHANGED' to parameter: 2
+15:13:42,847 TRACE StringType:153 - binding 'taky name CHANGED' to parameter: 3
+15:13:42,862 TRACE IntegerType:153 - binding '1007' to parameter: 4
+15:13:42,862 TRACE IntegerType:153 - binding '7' to parameter: 5
+15:13:42,862 TRACE IntegerType:153 - binding '2' to parameter: 6
+15:13:42,862 TRACE TimestampType:153 - binding '2013-04-22 15:13:42' to parameter: 7
+15:13:42,863 TRACE StringType:153 - binding 'uuid lol' to parameter: 8
+15:23:20,693 TRACE TrueFalseType:153 - binding 'true' to parameter: 1
+15:23:20,696 TRACE StringType:153 - binding 'category description' to parameter: 2
+15:23:20,696 TRACE StringType:153 - binding 'categoryName' to parameter: 3
+15:23:20,696 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:23:20,697 TRACE IntegerType:153 - binding '7' to parameter: 5
+15:23:20,697 TRACE IntegerType:153 - binding '10' to parameter: 6
+15:23:20,697 TRACE TimestampType:153 - binding '2013-04-22 15:23:20' to parameter: 7
+15:23:20,706 TRACE StringType:153 - binding 'nejake uuid' to parameter: 8
+15:23:20,767 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:23:20,767 TRACE StringType:153 - binding 'group description' to parameter: 2
+15:23:20,767 TRACE StringType:153 - binding 'groupName' to parameter: 3
+15:23:20,767 TRACE IntegerType:153 - binding '5' to parameter: 4
+15:23:20,768 TRACE TimestampType:153 - binding '2013-04-22 15:23:20' to parameter: 5
+15:23:20,791 TRACE TrueFalseType:153 - binding 'false' to parameter: 1
+15:23:20,791 TRACE StringType:153 - binding 'test descr CHANGED' to parameter: 2
+15:23:20,791 TRACE StringType:153 - binding 'taky name CHANGED' to parameter: 3
+15:23:20,793 TRACE IntegerType:153 - binding '1007' to parameter: 4
+15:23:20,793 TRACE IntegerType:153 - binding '7' to parameter: 5
+15:23:20,794 TRACE IntegerType:153 - binding '2' to parameter: 6
+15:23:20,794 TRACE TimestampType:153 - binding '2013-04-22 15:23:20' to parameter: 7
+15:23:20,794 TRACE StringType:153 - binding 'uuid lol' to parameter: 8

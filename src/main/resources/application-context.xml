@@ -9,12 +9,15 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 
 
 
-	<bean id="service" class="service.Service">
-		<property name="categoryDao" ref="categoryDao" />
-		<property name="groupDao" ref="groupDao" />
-		<property name="categoryAssembler" ref="categoryAssembler" />
-		<property name="groupAssembler" ref="groupAssembler" />
+	<bean id="groupService" class="service.GroupService" autowire="byName">
+<!-- 		<property name="categoryDao" ref="categoryDao" /> -->
+<!-- 		<property name="groupDao" ref="groupDao" /> -->
+<!-- 		<property name="categoryAssembler" ref="categoryAssembler" /> -->
+<!-- 		<property name="groupAssembler" ref="groupAssembler" /> -->
 	</bean>
+	
+	<bean id="categoryService" class="service.CategoryService" autowire="byName"></bean>
+	
 
 	<bean id="categoryAssembler" class="assembler.CategoryAssembler"
 		autowire="byName" />

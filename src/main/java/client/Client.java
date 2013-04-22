@@ -1,4 +1,5 @@
-package service;
+package client;
+
 
 
 
@@ -14,6 +15,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import service.CategoryService;
+import service.GroupService;
 
 import dao.CategoryDaoImpl;
 import dto.CategoryDto;
@@ -50,7 +54,8 @@ public class Client {
 		Session session = (Session) context.getBean("session");//getCurrentSession();
 		//session.
 		
-		Service service = (Service) context.getBean("service");
+		GroupService groupServ = (GroupService) context.getBean("groupService");
+		CategoryService categoryServ = (CategoryService) context.getBean("categoryService");
 		
 		
 		CategoryDto categoryDto	= new CategoryDto();
@@ -88,9 +93,10 @@ public class Client {
 		catDto.setCategoryDto("taky name CHANGED", "test descr CHANGED", 007, 2, new Date(), false, 1007, "uuid lol");
 		catDto.setGroups(groupDtosList);
 		
-		service.saveOrUpdate(groupDto);
-		service.saveOrUpdate(categoryDto);
-		service.saveOrUpdate(catDto);
+		categoryServ.saveOrUpdate(categoryDto);
+		groupServ.saveOrUpdate(groupDto);
+		
+		categoryServ.saveOrUpdate(catDto);
 		
 		//service.saveOrUpdate(category);
 		
